@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>URL解码 URL编码 在线URL解码/编码工具</title>
+		<meta name="keywords" content="URL解码,URL编码,在线URL解码/编码工具">
+		<link type="text/css" rel="stylesheet" href="../css/1.css">
+
+	</head>
+	<body class="mdui-loaded">
+		<div class="mod-panel">
+			<form class="form-horizontal">
+				<div class="form-group clearfix">
+					<label class="col-md-2 control-label">转换内容：</label>
+					<div class="col-md-8">
+						<textarea id="query" class="form-control" rows="8"
+							spellcheck="false">请输入要转换的内容、批量转换时一行一个</textarea>
+					</div>
+				</div>
+				<div class="form-group clearfix">
+					<div class="col-md-4 col-md-offset-2">
+						<select id="method" class="form-control">
+							<option value="encodeURIComponent">
+								encodeURIComponent/decodeURIComponent</option>
+							<option value="encodeURI">encodeURI/decodeURI</option>
+						</select>
+					</div>
+					<div class="col-md-4">
+						<button id="encode" class="btn btn-primary" data-type="encode">编码(encode)</button>
+						<button id="decode" class="btn btn-primary" data-type="decode">解码(decode)</button>
+					</div>
+				</div>
+				<div class="form-group clearfix">
+					<label class="col-md-2 control-label">转换结果：</label>
+					<div class="col-md-8">
+						<textarea id="result" class="form-control" rows="8" spellcheck="false"></textarea>
+					</div>
+				</div>
+			</form>
+
+			<div class="tips">
+				<h4>URL解码/编码介绍</h4>
+				<ul>
+					<li>URL解码/编码是一款对URL中文进行encodeURI编码或decodeURI解码的工具，支持encodeURIComponent编码、decodeURIComponent解码。
+					</li>
+				</ul>
+				<h4>什么是URL编码</h4>
+				<ul>
+					<li>url编码解码,又叫百分号编码，是统一资源定位(URL)编码方式。URL地址（常说网址）规定了常用地数字，字母可以直接使用，另外一批作为特殊用户字符也可以直接用（/,:@等），剩下的其它所有字符必须通过%xx编码处理。
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script type="text/javascript">
+			(function() {
+				var $mod_panel = $('.mod-panel');
+				var $query = $mod_panel.find('#query');
+				var $method = $mod_panel.find('#method');
+				var $result = $mod_panel.find('#result');
+				$query.on('click', function() {
+					var $this = $(this);
+					if (!$this.data('firstfocus')) {
+						if ($this.val() == '请输入要转换的内容、批量转换时一行一个') {
+							$this.val('');
+						}
+						$this.data('firstfocus', true)
+					}
+				});
+				$mod_panel.find('.btn').click(function(e) {
+					var query = $query.val().replace("\r", "").split("\n"),
+						type = $(this).data('type'),
+						method = $method.val();
+					if (query.length) {
+						$result.val('');
+						if ((method == "encodeURI") || (method == "encodeURIComponent")) {
+							var theFunction = {
+									"encodeURI": {
+										"encode": encodeURI,
+										"decode": decodeURI
+									},
+									"encodeURIComponent": {
+										"encode": encodeURIComponent,
+										"decode": decodeURIComponent
+									}
+								},
+								result = new Array();
+							for (var i = 0; i < query.length; i++) {
+								result.push(theFunction[method][type](query[i]));
+							}
+							$result.val(result.join("\n"));
+						}
+					}
+					return false;
+				});
+			})();
+		</script>
+
+
+	</body>
+</html>

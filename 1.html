@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+   <meta charset="UTF-8">
+  <title>受密码保护的链接-</title>
+  
+  <script>
+    var password = "11"; // 替换为所需密码
+    var attempts = 0;
+
+    function checkPassword() {
+      var enteredPassword = prompt("请输入密码"); //提示用户输入密码
+
+      if (enteredPassword === password) {
+        window.open("https://www.baidu.com/", "_blank"); // 替换为所需链接
+      } else {
+        attempts++;
+        if (attempts === 3) {
+          alert("密码不正确。请重试或使用提示词：11");
+        } else {
+          alert("密码不正确。请再试一次。");
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Password Protected Link</h1>
+  <a href="#" onclick="checkPassword()">单击此处访问链接</a>
+</body>
+</html>

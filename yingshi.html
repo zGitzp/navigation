@@ -1,0 +1,2520 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>影视网站</title>
+		<link rel="shortcut icon" href="./img/影视.svg" />
+		<!-- <link rel="stylesheet" href=" css/iconfont.css"> -->
+
+		<!-- 以下这条图标js，是本地js文件，但放在css文件夹里面，因为这是图标js -->
+		<script src="css/iconfont.js"></script>
+
+		<!-- 以下图标js文件为临时使用 调试专用 随时会过期-2023.4.23 -->
+		<!-- <script src="http://at.alicdn.com/t/c/font_2983800_6t0gef854pf.js"></script> -->
+		<style>
+			/* 此<style> 是配合图标js---iconfont.js一起配合使用的 */
+			.icon {
+				/*将icon大小设置和字体大小一致，后续在通过svg-icon 使用icon的时候，可直接设置图标的font-size即可控制图标大小 */
+				/* 
+					这是默认值
+						width: 1em;
+						height: 1em;
+						vertical-align: -0.15em;
+						fill: currentColor;
+						overflow: hidden; 
+					这是默认值
+					*/
+				width: 1em;
+				/* 宽 */
+				height: 1em;
+				/* 高 */
+				vertical-align: -0.15em;
+				/* 设置一个元素的垂直对齐。 向下浮动0.15em */
+				fill: currentColor;
+				/* 定义元素的颜色，currentColor是一个变量，这个变量的值就表示当前元素的color值，如果当前元素未设置color值，则从父元素继承 */
+				overflow: hidden;
+				/* 给一个元素中设置overflow:hidden，那么该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位 */
+				font-size: 17px;
+			}
+		</style>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<div class="container" id="container">
+			<aside class="left-bar" id="leftBar">
+				<div class="title">
+					<p>影视网站</p>
+				</div>
+				<nav class="nav">
+
+					<ul class="nav-item" id="navItem">
+						<li><a href="#2">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-sousuo-copy"></use>
+								</svg>
+								综合搜索
+							</a>
+						</li>
+						<li><a href="#3">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-hd-copy"></use>
+								</svg>
+								影视网站
+							</a>
+						</li>
+						<li><a href="#5">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-dongman"></use>
+								</svg>
+								动漫
+							</a>
+						</li>
+						<li><a href="#4">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-cili"></use>
+								</svg>
+								磁力搜索
+							</a>
+						</li>
+
+					</ul>
+
+				</nav>
+			</aside>
+			<section class="main">
+				<div id="mainContent">
+					<!-- 手机端菜单 -->
+					<div id="menu-box">
+						<div id="menu">
+							<input type="checkbox" id="menu-form">
+							<label for="menu-form" class="menu-spin">
+								<div class="line diagonal line-1"></div>
+								<div class="line horizontal"></div>
+								<div class="line diagonal line-2"></div>
+							</label>
+						</div>
+					</div>
+					<!-- 三号区域 -->
+					<div class="box">
+						<a href="" name="2"></a>
+						<div class="sub-category">
+							<div>
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-sousuo-copy"></use>
+								</svg>
+								综合搜索
+							</div>
+						</div>
+						<div>
+
+							<a target="_blank" href="https://search.ymck.me/">
+								<div class="item">
+									<div class="no-logo">影猫の仓库</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://yingshiso.com/">
+								<div class="item">
+									<div class="no-logo">影搜</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://影搜.com/">
+								<div class="item">
+									<div class="no-logo">影搜-备</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://cupfox.app/">
+								<div class="item">
+									<div class="no-logo">茶杯狐</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://tbsdy.cc/">
+								<div class="item">
+									<div class="no-logo">土拔鼠</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.tbsdy.info/address.html">
+								<div class="item">
+									<div class="no-logo">土拔鼠-备</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dianyingtaotao.com/">
+								<div class="item">
+									<div class="no-logo">电影淘淘</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.juheyingshi.com/">
+								<div class="item">
+									<div class="no-logo">聚合影视</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.725998.com/">
+								<div class="item">
+									<div class="no-logo">茶杯虎引擎</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dianyinggou.com/">
+								<div class="item">
+									<div class="no-logo">电影狗</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://soupian.xyz/">
+								<div class="item">
+									<div class="no-logo">搜片</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://soupian.icu/">
+								<div class="item">
+									<div class="no-logo">搜片-备</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://搜片.com/">
+								<div class="item">
+									<div class="no-logo">搜片-备2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.xmxone.cn/">
+								<div class="item">
+									<div class="no-logo">xmxone</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://wukongshipin.com/">
+								<div class="item">
+									<div class="no-logo">悟空视频</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://7080.wang/">
+								<div class="item">
+									<div class="no-logo">7080影视搜</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://dogechan.com/">
+								<div class="item">
+									<div class="no-logo">Dog分享</div>
+								</div>
+							</a>
+
+						</div>
+					</div>
+
+
+
+
+
+					<!-- 三号区域 -->
+					<div class="box">
+						<a href="" name="3"></a>
+						<div class="sub-category">
+							<div>
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-hd-copy"></use>
+								</svg>
+								影视网站
+							</div>
+						</div>
+						<div>
+
+                            <!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">新视觉影院</div>
+							</div>
+							<a target="_blank" href="https://www.5280.fun/">
+								<div class="item">
+									<div class="no-logo">新视觉影院-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.6080yy3.com/">
+								<div class="item">
+									<div class="no-logo">新视觉影院-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://6080yy3.com/">
+								<div class="item">
+									<div class="no-logo">新视觉影院-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.3ayy.com/">
+								<div class="item">
+									<div class="no-logo">新视觉影院-爱看影院</div>
+								</div>
+							</a>
+							
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">奈飞影视</div>
+							</div>
+							<a target="_blank" href="https://www.naifei.im/">
+								<div class="item">
+									<div class="no-logo">奈飞影视-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.naifei123.com/">
+								<div class="item">
+									<div class="no-logo">奈飞影视-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.naifei.la/">
+								<div class="item">
+									<div class="no-logo">奈飞影视-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.naifei.in/">
+								<div class="item">
+									<div class="no-logo">奈飞影视-4</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.naifei.icu/">
+								<div class="item">
+									<div class="no-logo">奈飞影视-5</div>
+								</div>
+							</a>
+
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">LIBVIO</div>
+							</div>
+							<a target="_blank" href="https://libvio.app/">
+								<div class="item">
+									<div class="no-logo">LIBVIO-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://tv.libvio.cc/">
+								<div class="item">
+									<div class="no-logo">LIBVIO-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.libvio.me/">
+								<div class="item">
+									<div class="no-logo">LIBVIO-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.libvio.fun/">
+								<div class="item">
+									<div class="no-logo">LIBVIO-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://t.me/+ncgxdCaete45NjU9">
+								<div class="item">
+									<div class="no-logo">LIBVIO-TG</div>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:libvio@outlook.com">
+								<div class="item">
+									<div class="no-logo">LIBVIO-邮箱</div>
+								</div>
+							</a>
+
+
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">土拔鼠电影搜索-综合搜索</div>
+							</div>
+							<a target="_blank" href="https://www.tbsdy.com">
+								<div class="item">
+									<div class="no-logo">土拔鼠-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://tbsdy.cc/">
+								<div class="item">
+									<div class="no-logo">土拔鼠-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.tbsdy.info/address.html">
+								<div class="item">
+									<div class="no-logo">土拔鼠-发布页</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">555电影</div>
+							</div>
+							<a target="_blank" href="https://555u.club/">
+								<div class="item">
+									<div class="no-logo">555电影-2024.1.13-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://555mv.net/">
+								<div class="item">
+									<div class="no-logo">555电影-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://555flim.top/">
+								<div class="item">
+									<div class="no-logo">555电影-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://55cin.net/">
+								<div class="item">
+									<div class="no-logo">555电影-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://555fm.club/">
+								<div class="item">
+									<div class="no-logo">555电影-4</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.5dy6.cc/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.5dy6.cc/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.5dy14.cc/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.5dy15.cc/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-4</div>
+								</div>
+							</a>
+							
+							
+							
+							
+							
+							
+							
+							<a target="_blank" href="https://555dq.vip/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-发布页-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.555pian.com/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-发布页-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.555yy1.com/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-发布页-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.555yy4.com/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-发布页-4</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.555yy6.com/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-发布页-5</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.555yy8.com/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-发布页-6</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.zxk555.com/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-发布页-7</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.555kan.net/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-发布页-8</div>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://www.555app.cc/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-发布页-9</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://app.ylcyyy.com/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-发布页-10</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.5ying.fun/">
+								<div class="item">
+									<div class="no-logo">555电影-旧-发布页-11</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://t.me/joinchat/qW-xKXq142Y3MzU1">
+								<div class="item">
+									<div class="no-logo">555电影TG群</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">片库---发送主题包含”最新网址“的邮件给get@btnull.org，会自动回复包含最新网址信息的邮件</div>
+							</div>
+
+							<a target="_blank" href="https://www.btnull.in/">
+								<div class="item">
+									<div class="no-logo">片库-1</div>
+								</div>
+							</a>
+							<!-- <a target="_blank" href="https://www.btnull.re/">
+								<div class="item">
+									<div class="no-logo">片库-2</div>
+								</div>
+							</a> -->
+							<a target="_blank" href="https://www.btnull.org/">
+								<div class="item">
+									<div class="no-logo">片库-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.btnull.com">
+								<div class="item">
+									<div class="no-logo">片库-4</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.btnull.to">
+								<div class="item">
+									<div class="no-logo">片库-5</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.btnull.si">
+								<div class="item">
+									<div class="no-logo">片库-6</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.btnull.nu">
+								<div class="item">
+									<div class="no-logo">片库-7</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.btnull.fun">
+								<div class="item">
+									<div class="no-logo">片库-8</div>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:get@btnull.org">
+								<div class="item">
+									<div class="no-logo">片库-邮箱</div>
+								</div>
+							</a>
+							
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">YYDS 影院</div>
+							</div>
+
+							<a target="_blank" href="https://www.yydsvod.com/">
+								<div class="item">
+									<div class="no-logo">YYDS影院</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.yydsvod.top">
+								<div class="item">
+									<div class="no-logo">YYDS影院-发布页</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">低端影视</div>
+							</div>
+							<a target="_blank" href="https://ddys.art/">
+								<div class="item">
+									<div class="no-logo">低端影视-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://ddys.pro/">
+								<div class="item">
+									<div class="no-logo">低端影视-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://ddys.tv/">
+								<div class="item">
+									<div class="no-logo">低端影视-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://ddys2.me/">
+								<div class="item">
+									<div class="no-logo">低端影视-4</div>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://ddys.site/">
+								<div class="item">
+									<div class="no-logo">低端影视-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://weibo.com/ddrkme">
+								<div class="item">
+									<div class="no-logo">低端影视-微博</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">厂长资源</div>
+							</div>
+							<a target="_blank" href="https://www.cz01.vip/">
+								<div class="item">
+									<div class="no-logo">厂长资源-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.czys.top/">
+								<div class="item">
+									<div class="no-logo">厂长资源-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://czzy.top/">
+								<div class="item">
+									<div class="no-logo">厂长资源-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.czzy77.com/">
+								<div class="item">
+									<div class="no-logo">厂长资源-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://t.me/+jY1P9DyaMNozN2M1">
+								<div class="item">
+									<div class="no-logo">厂长资源-TG群</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">哔嘀影视</div>
+							</div>
+							<a target="_blank" href="https://www.bdys.me/">
+								<div class="item">
+									<div class="no-logo">哔嘀影视-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.bdys01.com/">
+								<div class="item">
+									<div class="no-logo">哔嘀影视-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.btbdys.com">
+								<div class="item">
+									<div class="no-logo">哔嘀影视-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.bde4.icu">
+								<div class="item">
+									<div class="no-logo">哔嘀影视-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.52bdys.com/">
+								<div class="item">
+									<div class="no-logo">哔嘀影视-4</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.52bdys.com/magnet">
+								<div class="item">
+									<div class="no-logo">哔嘀影视-磁力解析</div>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://t.me/+VSUFAGZpzQpP94CY">
+								<div class="item">
+									<div class="no-logo">哔嘀影视-TG</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">NO-VIP-视频</div>
+							</div>
+							<a target="_blank" href="http://www.novipnoad.com/">
+								<div class="item">
+									<div class="no-logo">NO-vip-视频</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://weibo.com/u/3867246058">
+								<div class="item">
+									<div class="no-logo">NO视频-微博</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://t.me/novipnoad">
+								<div class="item">
+									<div class="no-logo">NO视频-电报-t.me</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://t.me/notvpush">
+								<div class="item">
+									<div class="no-logo">NO视频-电报-t.me-2</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">不开VIP-视频</div>
+							</div>
+							<a target="_blank" href="https://t.me/bukaivip">
+								<div class="item">
+									<div class="no-logo">不开VIP官方TG频道1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://t.me/vipyy666">
+								<div class="item">
+									<div class="no-logo">不开VIP官方TG频道2</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">热播之家</div>
+							</div>
+							<a target="_blank" href="https://rebozj.pro/">
+								<div class="item">
+									<div class="no-logo">热播之家-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.rebozj.vip">
+								<div class="item">
+									<div class="no-logo">热播之家-2-备用</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://t.me/rebozj">
+								<div class="item">
+									<div class="no-logo">热播之家-TG</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">天空影视</div>
+							</div>
+							<a target="_blank" href="https://tkznp.com/">
+								<div class="item">
+									<div class="no-logo">天空影视-新-主域名</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://tkys6.com/">
+								<div class="item">
+									<div class="no-logo">天空影视-备用域名-1</div>
+								</div>
+							</a>
+							<!-- <a target="_blank" href="https://www.tkys.tv/">
+								<div class="item">
+									<div class="no-logo">天空影视</div>
+								</div>
+							</a> -->
+							<a target="_blank" href="http://tkys.vip/">
+								<div class="item">
+									<div class="no-logo">天空影视-备用域名-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.tkznp1.com/">
+								<div class="item">
+									<div class="no-logo">天空影视-备用域名-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.tkznp2.com/">
+								<div class="item">
+									<div class="no-logo">天空影视-备用域名-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.tkznp3.com/">
+								<div class="item">
+									<div class="no-logo">天空影视-备用域名-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.tkznp4.com/">
+								<div class="item">
+									<div class="no-logo">天空影视-备用域名-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.tkznp5.com/">
+								<div class="item">
+									<div class="no-logo">天空影视-备用域名-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.tkznp6.com/">
+								<div class="item">
+									<div class="no-logo">天空影视-备用域名-2</div>
+								</div>
+							</a>
+
+
+							<a target="_blank" href="http://tkznp9.com/">
+								<div class="item">
+									<div class="no-logo">天空影视-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://tkznp8.com/">
+								<div class="item">
+									<div class="no-logo">天空影视-发布页+app-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://wwvt.lanzoum.com/inoMH0o11v8b">
+								<div class="item">
+									<div class="no-logo">天空影视-安卓app</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://t.me/+4rmvV0QvkEUyN2Jl">
+								<div class="item">
+									<div class="no-logo">天空影视-TG</div>
+								</div>
+							</a>
+
+
+
+
+
+							<!-- <a target="_blank" href="https://bukaivip1.com/">
+								<div class="item">
+									<div class="no-logo">VIP影院</div>
+								</div>
+							</a> -->
+
+							<!-- <a target="_blank" href="http://www.dytt.com/">
+								<div class="item">
+									<div class="no-logo">电影淘淘</div>
+								</div>
+							</a> -->
+
+
+
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">8仟影视 - 微信-八仟影视</div>
+							</div>
+							<a target="_blank" href="http://www.8kvod.com/">
+								<div class="item">
+									<div class="no-logo">8仟影视</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://vip.8kvod.com:888/">
+								<div class="item">
+									<div class="no-logo">8仟影视-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://a.vod.fit:668/web/app.html">
+								<div class="item">
+									<div class="no-logo">8仟影视-貌似发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://wwm.lanzouj.com/iKIHw04ainja">
+								<div class="item">
+									<div class="no-logo">8仟影视-TV</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://wwa.lanzoui.com/im72Nt1gqsf">
+								<div class="item">
+									<div class="no-logo">8仟影视-安卓--密码 2ha6</div>
+								</div>
+							</a>
+
+
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">莫扎兔影视</div>
+							</div>
+							<a target="_blank" href="https://www.mozhatu.vip/">
+								<div class="item">
+									<div class="no-logo">莫扎兔影视-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.mozhatu.com/">
+								<div class="item">
+									<div class="no-logo">莫扎兔影视-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://tv1920.com/">
+								<div class="item">
+									<div class="no-logo">莫扎兔影视-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://dazhutizi.net/">
+								<div class="item">
+									<div class="no-logo">莫扎兔影视-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dazhutizi.net/">
+								<div class="item">
+									<div class="no-logo">莫扎兔影视-4</div>
+								</div>
+							</a>
+
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">在线之家</div>
+							</div>
+							<a target="_blank" href="https://www.zxzj.org/">
+								<div class="item">
+									<div class="no-logo">在线之家-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.zxzj.pro/">
+								<div class="item">
+									<div class="no-logo">在线之家-2</div>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://www.zxzj.site/">
+								<div class="item">
+									<div class="no-logo">在线之家-发布页-01</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.zxzj.me/">
+								<div class="item">
+									<div class="no-logo">在线之家-发布页-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://zxzj.vip/">
+								<div class="item">
+									<div class="no-logo">在线之家-发布页-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.1993s.top/">
+								<div class="item">
+									<div class="no-logo">在线之家-发布页-4</div>
+								</div>
+							</a>
+
+
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">电影天堂</div>
+							</div>
+							<a target="_blank" href="https://www.dygod.net/">
+								<div class="item">
+									<div class="no-logo">电影天堂</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dy2018.com/">
+								<div class="item">
+									<div class="no-logo">电影天堂-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dytt89.com/">
+								<div class="item">
+									<div class="no-logo">电影天堂-2-备用</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dytt89.com/app/">
+								<div class="item">
+									<div class="no-logo">电影天堂-2-播放器-安卓pc-iso</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">纪录片</div>
+							</div>
+							<a target="_blank" href="http://www.jlpcn.net/">
+								<div class="item">
+									<div class="no-logo">纪录片下载</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">直播源</div>
+							</div>
+							<a target="_blank" href="https://github.com/iptv-org/iptv">
+								<div class="item">
+									<div class="no-logo">github直播源</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://github.com/biancangming/wtv/wiki">
+								<div class="item">
+									<div class="no-logo">最新直播源</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">BD影视 网址全挂了，暂未找到新网址</div>
+							</div>
+							<!-- <a target="_blank" href="https://www.bd2020.co/">
+								<div class="item">
+									<div class="no-logo">BD影视-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://bdys.co">
+								<div class="item">
+									<div class="no-logo">BD影视-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.bd-film.com/">
+								<div class="item">
+									<div class="no-logo">BD影视-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://v.bd2020.me/">
+								<div class="item">
+									<div class="no-logo">BD影视-4</div>
+								</div>
+							</a> -->
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">奈落影院</div>
+							</div>
+
+							<a target="_blank" href="https://www.newfii.com/">
+								<div class="item">
+									<div class="no-logo">奈落影院</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://newfii.com/">
+								<div class="item">
+									<div class="no-logo">奈落影院</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://nailuoys.com/">
+								<div class="item">
+									<div class="no-logo">奈落影院</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://nailuotvys.com/">
+								<div class="item">
+									<div class="no-logo">奈落影院</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.newfii.com/label/web.html">
+								<div class="item">
+									<div class="no-logo">奈落影院-发布页</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">鸭奈飞 网址全挂了，只有TG，暂未找到新网址</div>
+							</div>
+							<!-- <a target="_blank" href="https://azx.me/">
+								<div class="item">
+									<div class="no-logo">鸭奈飞-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://netflix.mom/">
+								<div class="item">
+									<div class="no-logo">鸭奈飞 -1</div>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://YaNetflix.com">
+								<div class="item">
+									<div class="no-logo">鸭奈飞 -2</div>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://netflix.wang/">
+								<div class="item">
+									<div class="no-logo">鸭奈飞 -3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://netflix.mom">
+								<div class="item">
+									<div class="no-logo">鸭奈飞 -4</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://netflixya.com">
+								<div class="item">
+									<div class="no-logo">鸭奈飞 -5</div>
+								</div>
+							</a> -->
+							<a target="_blank" href="https://t.me/YaChangQun">
+								<div class="item">
+									<div class="no-logo">鸭奈飞 -TG </div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">大米影视</div>
+							</div>
+							<a target="_blank" href="https://www.dmxq.net/">
+								<div class="item">
+									<div class="no-logo">大米影视-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dmys.tv/">
+								<div class="item">
+									<div class="no-logo">大米影视-发布页-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dmdy.vip/">
+								<div class="item">
+									<div class="no-logo">大米影视-发布页-3</div>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://www.dmdy6.cc/">
+								<div class="item">
+									<div class="no-logo">大米星球</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dmdy7.cc/">
+								<div class="item">
+									<div class="no-logo">大米星球</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dmdy8.cc/">
+								<div class="item">
+									<div class="no-logo">大米星球</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dmxq.me/">
+								<div class="item">
+									<div class="no-logo">大米星球</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://dmxq17.com/">
+								<div class="item">
+									<div class="no-logo">大米星球</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://dmxq18.com/">
+								<div class="item">
+									<div class="no-logo">大米星球</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://dmxq20.com/">
+								<div class="item">
+									<div class="no-logo">大米星球</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://dami2.me/">
+								<div class="item">
+									<div class="no-logo">大米星球</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://dami3.me/">
+								<div class="item">
+									<div class="no-logo">大米星球</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://dami4.me/">
+								<div class="item">
+									<div class="no-logo">大米星球</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://t.me/dmxqy">
+								<div class="item">
+									<div class="no-logo">大米星球-TG</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://t.me/+CW73ww6-Pq8yMzNl">
+								<div class="item">
+									<div class="no-logo">大米星球-TG-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://ptcc.in/joinchat/7e_TJNA6yy_QpzCyWUGmHg">
+								<div class="item">
+									<div class="no-logo">大米星球-土豆</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">布谷TV - 4K原盘 蓝光 电影 UHD 纪录片</div>
+							</div>
+
+							<a target="_blank" href="https://www.bugutv.net/">
+								<div class="item">
+									<div class="no-logo">布谷TV</div>
+								</div>
+							</a>
+
+
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">其他电影网站--也许有比较好的，没仔细看，先留着</div>
+							</div>
+
+							<a target="_blank" href="https://www.piaohua.com/">
+								<div class="item">
+									<div class="no-logo">飘花电影</div>
+								</div>
+							</a>
+
+							<!-- <a target="_blank" href="http://www.youzhidy.com/">
+								<div class="item">
+									<div class="no-logo">优质电影-可以下载电影，但不建议打开，首页全是游戏资源</div>
+								</div>
+							</a> -->
+
+
+							<a target="_blank" href="https://coverr.co/">
+								<div class="item">
+									<div class="no-logo">无版权视频搜索</div>
+								</div>
+							</a>
+
+
+							<a target="_blank" href="http://www.pianhd.com/">
+								<div class="item">
+									<div class="no-logo">高清电影</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://gaoqing.la/">
+								<div class="item">
+									<div class="no-logo">中国高清</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.xiepp.cc/">
+								<div class="item">
+									<div class="no-logo">下片网</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.magedn.com/">
+								<div class="item">
+									<div class="no-logo">magedn电影</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://loli.magedn.com/">
+								<div class="item">
+									<div class="no-logo">magedn电影--2</div>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://www.zbkyy.com/">
+								<div class="item">
+									<div class="no-logo">真不卡</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://t.me/zhenbuka">
+								<div class="item">
+									<div class="no-logo">真不卡-TG</div>
+								</div>
+							</a>
+
+
+							<a target="_blank" href="https://z2py.com/">
+								<div class="item">
+									<div class="no-logo">最爱片源网</div>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://t.me/fantuantv">
+								<div class="item">
+									<div class="no-logo">饭团影视--TG</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://auete.com/">
+								<div class="item">
+									<div class="no-logo">auete影视 *_*在线+下载</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://auete.cc/">
+								<div class="item">
+									<div class="no-logo">auete影视 备用</div>
+								</div>
+							</a>
+
+
+							<a target="_blank" href="pipiduck">
+								<div class="item">
+									<div class="no-logo">皮皮鸭-电影+资源 下载-需注册回复</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.chok8.com">
+								<div class="item">
+									<div class="no-logo">chok8影院</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.139ys.com">
+								<div class="item">
+									<div class="no-logo">139影院</div>
+								</div>
+							</a>
+
+							<a target="_blank" href="https://www.66s.cc/">
+								<div class="item">
+									<div class="no-logo">6V电影 *_*在线+下载</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.hao6v.com/">
+								<div class="item">
+									<div class="no-logo">6V电影-旧版 *_*下载</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">这个特殊</div>
+							</div>
+							<a target="_blank" href="http://tingshen.court.gov.cn/">
+								<div class="item">
+									<div class="no-logo">中国庭审公开网</div>
+								</div>
+							</a>
+
+
+						</div>
+					</div>
+
+
+					<div class="box">
+						<a href="" name="5"></a>
+						<div class="sub-category">
+							<div>
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-zimu"></use>
+								</svg>
+								字幕组
+							</div>
+						</div>
+						<div>
+
+							<a target="_blank" href="https://assrt.net/">
+								<div class="item">
+									<div class="no-logo">射手字幕</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://weibo.com/u/5063984390">
+								<div class="item">
+									<div class="no-logo">SSK 字幕组-微博</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://weibo.com/u/5418480862">
+								<div class="item">
+									<div class="no-logo">UnIon字幕组-微博</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://weibo.com/u/5446488422">
+								<div class="item">
+									<div class="no-logo">大家字幕组-微博</div>
+								</div>
+							</a>
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+					<div class="box">
+						<a href="" name="5"></a>
+						<div class="sub-category">
+							<div>
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-dongman"></use>
+								</svg>
+								动漫
+							</div>
+						</div>
+						<div>
+							
+							<a target="_blank" href="https://www.ysjdm.net/">
+								<div class="item">
+									<div class="no-logo">异世界动漫</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://dilidili.online/">
+								<div class="item">
+									<div class="no-logo">嘀哩嘀哩</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://anime1.me/">
+								<div class="item">
+									<div class="no-logo">anime1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dongmanmanhua.cn/">
+								<div class="item">
+									<div class="no-logo">咚漫漫画</div>
+								</div>
+							</a>
+							
+							<div class="item4">
+								<div class="no-logo">哈哩哈哩</div>
+							</div>
+							<a target="_blank" href="http://halihali18.com">
+								<div class="item">
+									<div class="no-logo">哈哩哈哩-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://halihali28.com">
+								<div class="item">
+									<div class="no-logo">哈哩哈哩-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://halihali.org">
+								<div class="item">
+									<div class="no-logo">哈哩哈哩-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://halihali1.top/">
+								<div class="item">
+									<div class="no-logo">哈哩哈哩-4</div>
+								</div>
+							</a>
+							
+							<div class="item4">
+								<div class="no-logo">樱花动漫--有很多樱花动漫站点，注意区分，我也搞不清哪个是正主</div>
+							</div>
+							
+							<a target="_blank" href="http://www.dmla1.com/">
+								<div class="item">
+									<div class="no-logo">
+										樱花动漫
+										<svg class="icon" aria-hidden="true">
+											<use xlink:href="#icon-wuxing-copy"></use>
+										</svg>
+									</div>
+
+								</div>
+							</a>
+							<a target="_blank" href="http://www.dmla4.com/">
+								<div class="item">
+									<div class="no-logo">樱花动漫</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.mxdm9.com/">
+								<div class="item">
+									<div class="no-logo">MX动漫</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://mxdm.tv">
+								<div class="item">
+									<div class="no-logo">MX动漫</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.xdm2.com/">
+								<div class="item">
+									<div class="no-logo">樱花动漫</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.yhdmba.net/">
+								<div class="item">
+									<div class="no-logo">樱花动漫</div>
+								</div>
+							</a>
+							
+							<div class="item4">
+								<div class="no-logo">打驴动漫</div>
+							</div>
+							<a target="_blank" href="https://www.dqsj.top/">
+								<div class="item">
+									<div class="no-logo">打驴动漫</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://dlidli.app/">
+								<div class="item">
+									<div class="no-logo">打驴动漫-官网</div>
+								</div>
+							</a>
+
+							
+
+							
+							<div class="item4">
+								<div class="no-logo">蓝猫动漫-以下三个都失效了</div>
+							</div>
+							<a target="_blank" href="http://lmfun.vip/">
+								<div class="item">
+									<div class="no-logo">蓝猫动漫</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://lanmao.app/">
+								<div class="item">
+									<div class="no-logo">蓝猫动漫-app-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://lmtv.app/">
+								<div class="item">
+									<div class="no-logo">蓝猫动漫-app-2</div>
+								</div>
+							</a>
+
+							
+							<div class="item4">
+								<div class="no-logo">古风漫画</div>
+							</div>
+							<a target="_blank" href="https://www.gufengmh9.com/">
+								<div class="item">
+									<div class="no-logo">古风漫画</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.123gf.com/">
+								<div class="item">
+									<div class="no-logo">古风漫画</div>
+								</div>
+							</a>
+							
+							
+							<div class="item4">
+								<div class="no-logo">包子漫画 G站漫畫发布页</div>
+							</div>
+							<a target="_blank" href="https://nav.telltome.net/">
+								<div class="item">
+									<div class="no-logo">包子漫画-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://baozimh.org/">
+								<div class="item">
+									<div class="no-logo">包子漫画-国际通用</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://godamanga.com/">
+								<div class="item">
+									<div class="no-logo">包子漫画-国际通用</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://cocomanga.org/">
+								<div class="item">
+									<div class="no-logo">包子漫画-国际通用</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://baozimh.one/">
+								<div class="item">
+									<div class="no-logo">包子漫画-大麓-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://cn.baozimh.org/">
+								<div class="item">
+									<div class="no-logo">包子漫画-大麓-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://cn.godamanga.site/">
+								<div class="item">
+									<div class="no-logo">包子漫画-大麓-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://bz.godamanga.art/">
+								<div class="item">
+									<div class="no-logo">包子漫画-备用-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://gd.godamanga.art/">
+								<div class="item">
+									<div class="no-logo">包子漫画-备用-2</div>
+								</div>
+							</a>
+							
+							
+							
+							
+							
+							<div class="item4">
+								<div class="no-logo">AGE动漫</div>
+							</div>
+							<a target="_blank" href="https://www.agedm.org/">
+								<div class="item">
+									<div class="no-logo">AGE动漫-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.age.tv/">
+								<div class="item">
+									<div class="no-logo">AGE动漫-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://agefans.com">
+								<div class="item">
+									<div class="no-logo">AGE动漫-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://rentry.la/agefans">
+								<div class="item">
+									<div class="no-logo">AGE动漫-发布页-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://github.com/agefanscom/website">
+								<div class="item">
+									<div class="no-logo">AGE动漫-发布页-2-github</div>
+								</div>
+							</a>
+							
+							<div class="item4">
+								<div class="no-logo">M站_哔咪动漫-据说打不开发布页可使用科学方法</div>
+							</div>
+							<a target="_blank" href="http://www.bimiacg.icu">
+								<div class="item">
+									<div class="no-logo">M站_哔咪动漫-永久发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.bimiacg4.net">
+								<div class="item">
+									<div class="no-logo">M站_哔咪动漫-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.bimiacg10.net/">
+								<div class="item">
+									<div class="no-logo">M站_哔咪动漫-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.bimiacg11.net/">
+								<div class="item">
+									<div class="no-logo">M站_哔咪动漫-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.bimiacg12.net/">
+								<div class="item">
+									<div class="no-logo">M站_哔咪动漫-4</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.bimiacg5.net">
+								<div class="item">
+									<div class="no-logo">M站_哔咪动漫-5</div>
+								</div>
+							</a>
+							
+
+
+
+
+
+
+
+							
+							<div class="item4">
+								<div class="no-logo">动漫-仅下载</div>
+							</div>
+							<a target="_blank" href="https://www.dmguo.org/forum.php">
+								<div class="item">
+									<div class="no-logo">动漫国字幕组</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://dongmanhuayuan.myheartsite.com/">
+								<div class="item">
+									<div class="no-logo">动漫花园同步站</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.kisssub.org/">
+								<div class="item">
+									<div class="no-logo">爱恋动漫 BT </div>
+								</div>
+							</a>
+							<a target="_blank" href="https://vcb-s.com/">
+								<div class="item">
+									<div class="no-logo">BD 动画下载</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.dongmanhuayuan.com/">
+								<div class="item">
+									<div class="no-logo">动漫花园 镜像资源站</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.36dm.com/">
+								<div class="item">
+									<div class="no-logo">简单动漫BT下载</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.comicat.org/">
+								<div class="item">
+									<div class="no-logo">漫猫动漫BT下载</div>
+								</div>
+							</a>
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- 四号 -->
+					<div class="box">
+						<a href="" name="4"></a>
+						<div class="sub-category">
+							<div>
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-cili"></use>
+								</svg>
+								磁力搜索
+							</div>
+						</div>
+						<div>
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">国外热门BT资源站的在线代理 👍部分有18+内容
+									<svg class="icon" aria-hidden="true">
+										<use xlink:href="#icon-jin"></use>
+									</svg>
+								</div>
+							</div>
+							<a target="_blank" href="https://torrentbay.net/unblock/">
+								<div class="item">
+									<div class="no-logo">torrentbay</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://immortalproxy.com/">
+								<div class="item">
+									<div class="no-logo">immortalproxy
+										<svg class="icon" aria-hidden="true">
+											<use xlink:href="#icon-jin"></use>
+										</svg>
+									</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://unblockit.click/">
+								<div class="item">
+									<div class="no-logo">unblockit <svg class="icon" aria-hidden="true">
+											<use xlink:href="#icon-jin"></use>
+										</svg>
+									</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://piratebayproxy.info/">
+								<div class="item">
+									<div class="no-logo">海盗湾代理列表</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://gitcode.net/axutongxue/backup/-/wikis/RARBG">
+								<div class="item">
+									<div class="no-logo">RARBG-欧洲最大BT下载网站-国内镜像站点</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://rarbgmirror.com/index70.php">
+								<div class="item">
+									<div class="no-logo">RARBG-镜像-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://rarbgmirror.org/index70.php">
+								<div class="item">
+									<div class="no-logo">RARBG-镜像-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://rarbg2018.org/torrents.php">
+								<div class="item">
+									<div class="no-logo">RARBG-镜像-3</div>
+								</div>
+							</a>
+
+						</div>
+
+						<div>
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">磁链-种子 互转工具</div>
+							</div>
+							<a target="_blank" href="http://tools.jb51.net/aideddesign/bt2mag">
+								<div class="item">
+									<div class="no-logo">站长工具-BT种子与磁力转换</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.xibianyun.com/convert/">
+								<div class="item">
+									<div class="no-logo">西边云-搜索+磁力转种子</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://www.hibt.net/">
+								<div class="item">
+									<div class="no-logo">hibt-磁链-种子 互转</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://instant.io/">
+								<div class="item">
+									<div class="no-logo">instant</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://btcache.me/">
+								<div class="item">
+									<div class="no-logo">btcache</div>
+								</div>
+							</a>
+
+
+						</div>
+
+
+
+						<div>
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">BT之家</div>
+							</div>
+							<a target="_blank" href="https://github.com/sesezy/bthome/wiki">
+								<div class="item">
+									<div class="no-logo">BT之家-github发布页</div>
+								</div>
+							</a>
+							<!-- <a target="_blank" href="https://shimo.im/docs/dPkpKaoQMasjbZqO/read">
+								<div class="item">
+									<div class="no-logo">BT之家-云笔记 发布页</div>
+								</div>
+							</a> -->
+							<!-- <a target="_blank" href="https://btbtt11.com/">
+								<div class="item">
+									<div class="no-logo">BT下载网站-1</div>
+								</div>
+							</a> -->
+							<a target="_blank" href="https://btbtt12.com/">
+								<div class="item">
+									<div class="no-logo">BT下载网站-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://btbtt13.com/">
+								<div class="item">
+									<div class="no-logo">BT下载网站-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://bt529.com/">
+								<div class="item">
+									<div class="no-logo">BT下载网站-备用-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://bt5268.com/">
+								<div class="item">
+									<div class="no-logo">BT下载网站-备用-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://bt5288.com/">
+								<div class="item">
+									<div class="no-logo">BT下载网站-备用-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://bt5298.com/">
+								<div class="item">
+									<div class="no-logo">BT下载网站-备用-4</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">搜磁力</div>
+							</div>
+							<a target="_blank" href="https://axu.cilimiaomiao.xyz/">
+								<div class="item">
+									<div class="no-logo">搜磁力（8年老站／数据庞大）👍</div>
+								</div>
+							</a>
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">菟丝子资源社区</div>
+							</div>
+							<a target="_blank" href="https://dodder.top/">
+								<div class="item">
+									<div class="no-logo">菟丝子资源社区</div>
+								</div>
+							</a>
+
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">吃力网</div>
+							</div>
+							<a target="_blank" href="https://www.sokankan.top/">
+								<div class="item">
+									<div class="no-logo">吃力网地址发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://bthook.win/">
+								<div class="item">
+									<div class="no-logo">吃力网地址发布页-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:7qihuad@gmail.com">
+								<div class="item">
+									<div class="no-logo">吃力网 邮箱</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://sokankan48.cc">
+								<div class="item">
+									<div class="no-logo">吃力网-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.sokankan47.live/">
+								<div class="item">
+									<div class="no-logo">吃力网-2</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">磁力搜索</div>
+							</div>
+							<a target="_blank" href="https://cilisousuo.com/">
+								<div class="item">
+									<div class="no-logo">磁力搜索-1</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">磁力树</div>
+							</div>
+							<a target="_blank" href="https://bthook.win/">
+								<div class="item">
+									<div class="no-logo">磁力树地址发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://bthook.cc/">
+								<div class="item">
+									<div class="no-logo">磁力树地址发布页-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://btshu.top/">
+								<div class="item">
+									<div class="no-logo">磁力树-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://btshu.club">
+								<div class="item">
+									<div class="no-logo">磁力树-2</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">磁力天堂</div>
+							</div>
+							<a target="_blank" href="https://磁力天堂.com/">
+								<div class="item">
+									<div class="no-logo">磁力天堂地址发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:cltiantang@gmail.com">
+								<div class="item">
+									<div class="no-logo">磁力天堂邮箱</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://cltt623.buzz/">
+								<div class="item">
+									<div class="no-logo">磁力天堂-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://cltt624.buzz/">
+								<div class="item">
+									<div class="no-logo">磁力天堂-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://cltt625.buzz/">
+								<div class="item">
+									<div class="no-logo">磁力天堂-3</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">搜番</div>
+							</div>
+							<a target="_blank" href="https://sofan.icu/">
+								<div class="item">
+									<div class="no-logo">搜番-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:lauchichoy@south.flyzoohotel.com.cn">
+								<div class="item">
+									<div class="no-logo">搜番-邮箱</div>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:zamnaus@mail.ru">
+								<div class="item">
+									<div class="no-logo">搜番-邮箱-</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://go.sofan.in/">
+								<div class="item">
+									<div class="no-logo">搜番-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://xx.sofan.ws/">
+								<div class="item">
+									<div class="no-logo">搜番-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://do.sofan.ws/">
+								<div class="item">
+									<div class="no-logo">搜番-3</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">BT联盟</div>
+							</div>
+							<a target="_blank" href="https://btlm.art/">
+								<div class="item">
+									<div class="no-logo">BT联盟-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://co.btlm.pro/">
+								<div class="item">
+									<div class="no-logo">BT联盟-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://cdn.btlm.top:65533/">
+								<div class="item">
+									<div class="no-logo">BT联盟-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:chenxi76165@tom.com">
+								<div class="item">
+									<div class="no-logo">BT联盟-邮箱</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">BT1207</div>
+							</div>
+							<a target="_blank" href="https://bt1207ai.top/">
+								<div class="item">
+									<div class="no-logo">BT1207-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:bt1207super@gmail.com">
+								<div class="item">
+									<div class="no-logo">BT1207-邮箱</div>
+								</div>
+							</a>
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">磁力天堂</div>
+							</div>
+							<a target="_blank" href="https://5cltt.vip/">
+								<div class="item">
+									<div class="no-logo">磁力天堂-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://cltt.vip">
+								<div class="item">
+									<div class="no-logo">磁力天堂-1</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">磁力片</div>
+							</div>
+							<a target="_blank" href="https://p3.btapp.cc/">
+								<div class="item">
+									<div class="no-logo">磁力片-1</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">磁力猫</div>
+							</div>
+							<a target="_blank" href="http://clm.la/">
+								<div class="item">
+									<div class="no-logo">磁力猫-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://cilimao.biz/">
+								<div class="item">
+									<div class="no-logo">磁力猫-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://clm00.vip/">
+								<div class="item">
+									<div class="no-logo">磁力猫-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://cilimao.app/">
+								<div class="item">
+									<div class="no-logo">磁力猫-4</div>
+								</div>
+							</a>
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">磁力狗</div>
+							</div>
+							<a target="_blank" href="http://ciligou.app/">
+								<div class="item">
+									<div class="no-logo">磁力狗-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://clg.im/">
+								<div class="item">
+									<div class="no-logo">磁力狗-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://ciligou.top/">
+								<div class="item">
+									<div class="no-logo">磁力狗-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://ciligou.me/">
+								<div class="item">
+									<div class="no-logo">磁力狗-4</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://clg05.com/">
+								<div class="item">
+									<div class="no-logo">磁力狗-5</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">SO BT</div>
+							</div>
+							<a target="_blank" href="http://sobt.me/">
+								<div class="item">
+									<div class="no-logo">SoBT</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://sobt4.net/">
+								<div class="item">
+									<div class="no-logo">SoBT-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://sobt.me">
+								<div class="item">
+									<div class="no-logo">SoBT-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://sobt.info">
+								<div class="item">
+									<div class="no-logo">SoBT-4</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">rutracker</div>
+							</div>
+							<a target="_blank" href="http://rutracker.org/forum/index.php">
+								<div class="item">
+									<div class="no-logo">rutracker种子吧</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">BT狐狸</div>
+							</div>
+							<a target="_blank" href="http://btfox0.org/">
+								<div class="item">
+									<div class="no-logo">BT狐狸-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://btfox5.vip/">
+								<div class="item">
+									<div class="no-logo">BT狐狸-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://btfox.xyz/">
+								<div class="item">
+									<div class="no-logo">BT狐狸-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://cili5.net">
+								<div class="item">
+									<div class="no-logo">BT狐狸-4</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">种子吧</div>
+							</div>
+
+							<a target="_blank" href="http://seed8.org/">
+								<div class="item">
+									<div class="no-logo">种子吧</div>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:888@clb.biz">
+								<div class="item">
+									<div class="no-logo">种子吧-邮箱</div>
+								</div>
+							</a>
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">磁力宝</div>
+							</div>
+							<a target="_blank" href="http://clb.la/">
+								<div class="item">
+									<div class="no-logo">磁力宝</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://clb3.top/">
+								<div class="item">
+									<div class="no-logo">磁力宝-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://clb.biz">
+								<div class="item">
+									<div class="no-logo">磁力宝-3</div>
+								</div>
+							</a>
+							<a target="_blank" href="http://cilibao.biz">
+								<div class="item">
+									<div class="no-logo">磁力宝-3</div>
+								</div>
+							</a>
+
+
+
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">雨花阁</div>
+							</div>
+							<a target="_blank" href="https://www.yuhuage.art/">
+								<div class="item">
+									<div class="no-logo">雨花阁-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://github.com/yuhuage/dizhi/">
+								<div class="item">
+									<div class="no-logo">雨花阁-git备用发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:yuhuage.art@gmail.com">
+								<div class="item">
+									<div class="no-logo">雨花阁-邮箱</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.yuhuage.win">
+								<div class="item">
+									<div class="no-logo">雨花阁-发布页-翻</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.yhgbt11.xyz/">
+								<div class="item">
+									<div class="no-logo">雨花阁-1</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.yhgbt7.xyz">
+								<div class="item">
+									<div class="no-logo">雨花阁-2</div>
+								</div>
+							</a>
+							<a target="_blank" href="https://www.yhgbt44.xyz/">
+								<div class="item">
+									<div class="no-logo">雨花阁-3</div>
+								</div>
+							</a>
+							<!-- ************----------************ -->
+							<div class="item4">
+								<div class="no-logo">磁力爬</div>
+							</div>
+							<a target="_blank" href="httpS://www.zuixin2023.com">
+								<div class="item">
+									<div class="no-logo">磁力爬-发布页</div>
+								</div>
+							</a>
+							<a target="_blank" href="httpS://www.cilipa.me">
+								<div class="item">
+									<div class="no-logo">磁力爬-最新</div>
+								</div>
+							</a>
+							<a target="_blank" href="httpS://www.cilipa.cc">
+								<div class="item">
+									<div class="no-logo">磁力爬-备用</div>
+								</div>
+							</a>
+							<a target="_blank" href="httpS://www.cilipa2023.shop">
+								<div class="item">
+									<div class="no-logo">磁力爬-备</div>
+								</div>
+							</a>
+							<a target="_blank" href="httpS://cilipa.xindizhi.shop">
+								<div class="item">
+									<div class="no-logo">磁力爬-备</div>
+								</div>
+							</a>
+							<a target="_blank" href="httpS://www.cilipa.net">
+								<div class="item">
+									<div class="no-logo">磁力爬-备</div>
+								</div>
+							</a>
+							<a target="_blank" href="mailto:ZuiXinPa@Gmail.Com">
+								<div class="item">
+									<div class="no-logo">磁力爬-邮箱</div>
+								</div>
+							</a>
+
+
+
+
+
+							<!-- <a target="_blank" href="https://www.clttr.xyz/">
+								<div class="item">
+									<div class="no-logo">磁力天堂</div>
+								</div>
+							</a> -->
+							<!-- <a target="_blank" href="https://jubt.net/cn/index.html">
+								<div class="item">
+									<div class="no-logo">聚BT</div>
+								</div>
+							</a> -->
+
+
+							<!-- <a target="_blank" href="http://www.baiduonce.com/">
+								<div class="item">
+									<div class="no-logo">摆渡一下</div>
+								</div>
+							</a> -->
+							<!-- <a target="_blank" href="https://www.cupfox.com/">
+								<div class="item">
+									<div class="no-logo">茶杯狐资源</div>
+								</div>
+							</a> -->
+							<!-- <a target="_blank" href="http://oabt007.com/home.html">
+								<div class="item">
+									<div class="no-logo">磁力站</div>
+								</div>
+							</a> -->
+							<!-- <a target="_blank" href="https://www.btcherries.xyz/">
+								<div class="item">
+									<div class="no-logo">磁力搜索</div>
+								</div>
+							</a> -->
+
+							<!-- <a target="_blank" href="https://pan.09l.me/">
+								<div class="item">
+									<div class="no-logo">云盘恶魔</div>
+								</div>
+							</a> -->
+							<!-- <a target="_blank" href="https://bt.09l.me/">
+								<div class="item">
+									<div class="no-logo">磁力恶魔</div>
+								</div>
+							</a> -->
+							<!-- <a target="_blank" href="https://www.yhg2.xyz/">
+								<div class="item">
+									<div class="no-logo">雨花阁</div>
+								</div>
+							</a> -->
+							<!-- <a target="_blank" href="http://www.sobt5.pw/">
+								<div class="item">
+									<div class="no-logo">SOBT</div>
+								</div>
+							</a> -->
+							<<!-- a target="_blank" href="https://www.crsoso.online/">
+								<div class="item">
+									<div class="no-logo">超人搜索</div>
+								</div>
+								</a> -->
+								<!-- <a target="_blank" href="http://www.ciliba.bid/">
+								<div class="item">
+									<div class="no-logo">磁力吧</div>
+								</div>
+							</a> -->
+								<!-- <a target="_blank" href="https://skrbtcl.buzz/">
+								<div class="item">
+									<div class="no-logo">skrbt</div>
+								</div>
+							</a> -->
+
+								<!-- <a target="_blank" href="http://www.btdad.xyz/">
+								<div class="item">
+									<div class="no-logo">btdad</div>
+								</div>
+							</a> -->
+								<!-- <a target="_blank" href="http://www.zhongzi8.net/">
+								<div class="item">
+									<div class="no-logo">种子吧</div>
+								</div>
+							</a> -->
+
+								<a target="_blank" href="--h----t----t--">
+									<div class="item">
+										<div class="no-logo">--------</div>
+									</div>
+								</a>
+
+						</div>
+
+					</div>
+
+
+					<div class="box">
+						<a href="" name="数字模板"></a>
+						<div class="sub-category">
+							<div><i class="iconfont icon-tool"></i>文字模板</div>
+						</div>
+						<div>
+							<a target="_blank" href="地址模板">
+								<div class="item">
+									<div class="no-logo">名字模板</div>
+								</div>
+							</a>
+							<a target="_blank" href="地址模板">
+								<div class="item">
+									<div class="no-logo">名字模板</div>
+								</div>
+							</a>
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="box">
+						<a href="" name="数字模板"></a>
+						<div class="sub-category">
+							<div><i class="iconfont icon-tool"></i>文字模板</div>
+						</div>
+						<div>
+							<a target="_blank" href="地址模板">
+								<div class="item">
+									<div class="no-logo">名字模板</div>
+								</div>
+							</a>
+							<a target="_blank" href="地址模板">
+								<div class="item">
+									<div class="no-logo">名字模板</div>
+								</div>
+							</a>
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+
+					<footer class="footer">
+						<div class="copyright">
+							<div>
+								Copyright © 2020- 2021
+								<!-- 网页布局代码参考飞叶导航 -->
+								<a target="_blank" href="http://ifeiye.com">飞叶导航</a>
+								<!-- 飞叶导航开源地址 -->
+								<a target="_blank" href="https://gitee.com/ifeiye/dh">飞叶导航开源地址</a>
+
+								<!-- 搜索部分参考一纳米导航 -->
+								<a target="_blank" href="http://www.1nami.com/">一纳米导航</a>
+							</div>
+						</div>
+					</footer>
+					<div id="fixedBar"><svg class="Zi Zi--BackToTop" title="回到顶部" fill="currentColor"
+							viewBox="0 0 24 24" width="24" height="24">
+							<path
+								d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z">
+								<!-- <path> 一个向上的箭头 </path> -->
+							</path>
+						</svg></div>
+			</section>
+			<script src="js/jquery.js"></script>
+			<script>
+				var oMenu = document.getElementById('menu');
+				var oLeftBar = document.getElementById('leftBar');
+				var menuFrom = document.getElementById('menu-form');
+
+				oMenu.onclick = function() {
+					if (oLeftBar.offsetLeft == 0) {
+						oLeftBar.style.left = -249 + 'px';
+					} else {
+						oLeftBar.style.left = 0;
+					}
+				}
+
+
+				// 监听页面宽度变化
+				window.onresize = function() {
+					judgeWidth();
+					// console.log(document.documentElement.clientWidth);
+				};
+
+				// 判断页面宽度
+				function judgeWidth() {
+					if (document.documentElement.clientWidth > 481) {
+						oLeftBar.style.left = 0;
+					} else {
+						oLeftBar.style.left = -249 + 'px';
+					}
+				}
+
+
+				var oNavItem = document.getElementById('navItem');
+				var aA = oNavItem.getElementsByTagName('a');
+				for (var i = 0; i < aA.length; i++) {
+					aA[i].onclick = function() {
+						for (var j = 0; j < aA.length; j++) {
+							aA[j].className = '';
+						}
+						this.className = 'active';
+						if (oLeftBar.offsetLeft == 0) {
+							if (document.documentElement.clientWidth <= 481) {
+								oLeftBar.style.left = -249 + 'px';
+								menuFrom.checked = false;
+
+							}
+						}
+					}
+				}
+
+
+				$(window).scroll(function() {
+					if ($(window).scrollTop() >= 200) {
+						$('#fixedBar').fadeIn(300);
+					} else {
+						$('#fixedBar').fadeOut(300);
+					}
+				});
+				$('#fixedBar').click(function() {
+					$('html,body').animate({
+						scrollTop: '0px'
+					}, 800);
+				})
+			</script>
+	</body>
+
+</html>

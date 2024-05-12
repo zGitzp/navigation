@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>随机密码</title>
+		<!-- <link rel="shortcut icon" href="tubiao2.ico" /> -->
+		<link rel="stylesheet" href="../css/suijimm.css">
+	</head>
+
+	<div class="box">
+		<h2>随机密码生成器</h2>
+		<input type="text" name="" placeholder="创建密码" id="password" readonly>
+		<table>
+			<th>
+				<div id="button" class="btn1" onclick="genPassword()">生成</div>
+			</th>
+			<th><a id="button" class="btn2" onclick="copyPassword()">复制</a></th>
+		</table>
+
+	</div>
+
+	<script>
+		//首先我设置了一个密码变量(input id)。现在我们将使用函数 genPassword使这个系统功能。
+		var password = document.getElementById("password");
+		//在 varchars 中，我添加了不同的数字、数字、符号等。这些相互关联的符号和数字将创建随机密码。
+		//使用var passwordLength确定了密码的数量为 12，
+		//它每次都会创建一个包含13 (12 + 1) 个字符的密码。
+		//可以根据需要变换数值
+		function genPassword() {
+			var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			var passwordLength = 25;
+			var password = "";
+
+			//这里的 Math.random() 方法将帮助创建一个随机密码
+			for (var i = 0; i <= passwordLength; i++) {
+				var randomNumber = Math.floor(Math.random() * chars.length);
+				password += chars.substring(randomNumber, randomNumber + 1);
+			}
+			//在输入框中显示这个密码
+			//使用了输入的 ID 密码并设置了该 ID 的常量。
+			//通过该常量在输入框中显示上述条件
+			document.getElementById("password").value = password;
+		}
+		//使设计中的复制按钮生效
+		//现在已经确定了输入框的ID变量
+		//然后使用document.execCommand激活按钮
+		function copyPassword() {
+			var copyText = document.getElementById("password");
+			copyText.select();
+			copyText.setSelectionRange(0, 999);
+			document.execCommand("copy");
+		}
+	</script>
+</html>

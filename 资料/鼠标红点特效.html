@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标特效</title>
+    <style>
+        .cursor {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: red;
+            pointer-events: none;
+            transition: all 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+    <script>
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
+    </script>
+</body>
+</html>

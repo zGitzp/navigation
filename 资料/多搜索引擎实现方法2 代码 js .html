@@ -1,0 +1,32 @@
+<div id="footer">
+
+	<form name="formmain" id="formmain" onSubmit="search()">
+
+		<input name="searchkey" type="text" id="searchkey" value="" size="35" onfocus=this.select();
+			onmouseover=this.select();>
+
+		<input name="Submit" type="button" style="line-height:18px;" value=" " onclick="search()" id="searchbutton" />
+
+		<input onclick="search();" name=radio type=radio id="rdbaidu" checked><a href="http://www.baidu.com">百度</a>
+
+		<input onclick="search();" name=radio type=radio id="rdgoogle"><a href="http://www.google.com/intl/zh-cn/">谷歌</a>
+
+
+	</form>
+
+</div>
+<script type="text/javascript">
+	function search() {
+
+		if (formmain.rdgoogle.checked)
+
+			window.open("http://www.google.com.hk/search?hl=zh-CN&q=" + encodeURI(formmain.searchkey.value));
+
+		if (formmain.rdbaidu.checked)
+
+			window.open("http://www.baidu.com/baidu?tn=zhongguosou&ct=&lm=&z=&rn=&word=" + formmain.searchkey.value +
+				"&_si.x=4&_si.y=2");
+
+		
+	}
+</script>

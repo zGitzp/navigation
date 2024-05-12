@@ -1,0 +1,1100 @@
+a,
+aside,
+body,
+div,
+footer,
+html,
+i,
+img,
+li,
+nav,
+p,
+section,
+ul {
+	padding: 0;
+	margin: 0
+}
+
+li {
+	list-style: none;
+
+	display: inline;
+	line-height: 24px;
+	height: auto;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+a {
+	text-decoration: none
+		/* 设置元素的文本修饰 */
+}
+
+body {
+	font-size: 12px;
+	color: #4d4d4d;
+	font-family: Helvetica Neue, Microsoft Yahei
+}
+
+.container,
+.main,
+body {
+	background: #f3f6f8
+}
+
+.iconfont {
+	color: #6b7386;
+	padding-right: 4px
+}
+
+.container .left-bar {
+	position: fixed;
+	padding: 0 20px;
+	background: #30333c;
+	color: #6b7386;
+	box-sizing: border-box;
+	flex-direction: column;
+	height: 100vh;
+	display: flex;
+	width: 248px;
+	transition: all .5s
+}
+
+.container .main {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-orient: vertical;
+	margin-left: 248px
+}
+
+.container .main .iconfont {
+	font-size: 18px;
+	color: #000
+}
+
+.set-scroll {
+	background-color: #494f5e;
+	border-radius: 0;
+	width: 4px
+}
+
+
+
+
+
+/* .left-bar */
+
+.left-bar .title {
+	color: #fff;
+	font-size: 18px;
+	height: 50px;
+	line-height: 50px
+}
+
+.left-bar .title p {
+	text-align: center
+}
+
+.left-bar .nav {
+	flex: 1;
+	-webkit-box-flex: 1;
+	flex-grow: 1
+}
+
+.left-bar .nav .item {
+	height: 48px;
+	line-height: 46px;
+	border-top: 2px solid rgba(255, 255, 255, .04);
+	border-bottom: 2px solid rgba(255, 255, 255, .04)
+}
+
+.left-bar .nav>.active {
+	position: relative
+}
+
+.left-bar .nav>.active .line {
+	position: absolute;
+	right: 0;
+	height: 30px;
+	width: 3px;
+	background: #3a85ff;
+	z-index: 100000;
+	margin-top: 10px
+}
+
+.left-bar .nav-item {
+	min-height: 100vh;
+	overflow-y: scroll
+}
+
+.left-bar .nav-item::-webkit-scrollbar-track {
+	background-color: #494f5e;
+	border-radius: 0;
+	width: 4px
+}
+
+.left-bar .nav-item::-webkit-scrollbar-thumb {
+	background-color: #494f5e;
+	border-radius: 0;
+	width: 4px
+}
+
+.left-bar .nav-item::-webkit-scrollbar {
+	background-color: #494f5e;
+	border-radius: 0;
+	width: 4px
+}
+
+.left-bar .nav-item li {
+	padding-left: 20px;
+	height: 24px;
+	line-height: 24px
+}
+
+.left-bar .nav-item li:hover a,
+.left-bar .nav-item li:hover i,
+.left-bar .nav-item li>.active,
+.left-bar .nav-item li>.active i {
+	color: #ff33bf
+		/* 鼠标点击左侧菜单栏显示彩色 */
+}
+
+.left-bar .nav-item li a {
+	text-decoration: none;
+	font-size: 14px;
+	display: inline-block;
+	width: 100%;
+	color: #6b7386
+}
+
+
+
+
+button {
+	appearance: auto;
+	/* 控制基于操作系统主题的 UI 控件的本机外观 */
+	writing-mode: horizontal-tb !important;
+	/* writing-mode 属性规定水平还是垂直地排布文本行  horizontal-tb:让内容从左到右水平流动，从上到下垂直流动  vertical-rl:让内容从上到下垂直流动，从右到左水平流动。  vertical-lr:让内容从上到下垂直流动，从左到右水平流动。 */
+	/* font-style: ; */
+	/* font-style 属性定义字体的风格样式  normal	默认值   italic：斜体  oblique：倾斜  inherit：从父元素继承 */
+	/* font-variant-ligatures: ; */
+	/* 控制着其所应用元素文本的 ligatures 与 contextual forms 。会使文字最终的表现形式更加统一 */
+	/* font-variant-caps: ; */
+	/* 控制大写字母特殊字符的使用 */
+	/* font-variant-numeric: ; */
+	/* 控制数字，分数和序号标记的替代字形的使用 */
+	/* font-variant-east-asian: ; */
+	/* 控制东亚脚本（如日语和中文）的备用字形的使用 */
+	/* font-weight: ; */
+	/* font-weight 属性设置文本的粗细。normal:默认值。定义标准的字符。 bold:定义粗体字符。lighter:定义更细的字符。*/
+	/* font-stretch: ; */
+	/* font-stretch 属性可对当前的 font-family 进行伸缩变形  normal	默认值。缩放比例为标准; wider:伸展;narrower:收缩 */
+	/* font-size: ; */
+	/* font-size 属性可设置字体的尺寸  默认值：medium */
+	/* font-family: ; */
+	/* font-family 规定元素的字体系列 */
+	text-rendering: auto;
+	/* text-rendering :定义浏览器渲染引擎如何渲染字体。auto:浏览器会在速度、清晰度、几何精度之间进行权衡  optimizeSpeed:优先 渲染速度,它会使字间距和连字无效。optimizeLegibility:优先 易读性,但有性能问题  geometricPrecision:着重考虑几何精度 */
+	/* color: auto; */
+	/* color 属性规定文本的颜色  auto:默认 */
+	letter-spacing: normal;
+	/* letter-spacing 属性增加或减少 字符 间的空白（字符间距）  每个字母的间距 */
+	word-spacing: normal;
+	/* word-spacing 属性增加或减少 单词 间的空白（即字间隔）     每个单词的间距 */
+	line-height: normal;
+	/* line-height 属性设置行间的距离（行高）  注:不允许负值 */
+	text-transform: none;
+	/* text-transform 属性控制文本的大小写 */
+	text-indent: 0px;
+	/* text-indent 属性规定文本块中首行文本的缩进 */
+	text-shadow: none;
+	/* text-shadow 属性向文本设置阴影 */
+	display: inline-block;
+	/* 规定元素应该生成的框的类型 inline-block:行内块元素  inline:默认  list-item:此元素会作为列表显示 */
+	text-align: center;
+	/* text-align 文本的水平对齐方式 left:把文本排列到左边。默认值：由浏览器决定 right:把文本排列到右边。center:把文本排列到中间。justify:实现两端对齐文本效果 */
+	/* align-items: flex-start; */
+	/* align-items 属性为弹性容器内的项目指定默认对齐方式。center:项目位于容器的中央。flex-start:项目位于容器的开头。flex-end:项目位于容器的末端 */
+	cursor: pointer;
+	/* cursor 属性规定要显示的光标的类型（形状） default：默认光标（通常是一个箭头）；auto	默认。浏览器设置的光标；crosshair：光标呈现为十字线；pointer	光标呈现为指示链接的指针（一只手） */
+	/* box-sizing: border-box; */
+	/* 规定两个并排的带边框的框 */
+	background-color: transparent;
+	/* background-color 属性设置元素的背景颜色  transparent 默认为透明；inherit从父元素继承*/
+	margin: 2px 0.5px;
+	/* 设置 元素的 4 个外边距 px像素 em是相对长度单位   4个 上 右 下 左  3个 上 右左 下  2个 上下 左右*/
+	padding: 2px 6px;
+	/* padding 填充属性 上下2px,左右6px */
+	border-width: 1px;
+	/* border-width属性设置一个元素的四个边框的宽度。此属性可以有一到四个值。 */
+	border-style: solid;
+	/* border-style属性设置一个元素的四个边框的样式。dotted 点状; solid 实线; double 双线; dashed 虚线； outset 定义 3D outset 边框。其效果取决于 border-color 的值*/
+	border-color: auto;
+	/* 设置 4 个边框的颜色 */
+	/* border-image: initial; */
+	/* 将图片规定为包围 div 元素的边框 */
+}
+
+
+
+
+
+
+.nav .item a {
+	color: #fff
+}
+
+.nav .comment {
+	position: fixed;
+	z-index: 100;
+	bottom: 1px;
+	width: 200px;
+	background: #30333c
+}
+
+.main #mainContent {
+	max-width: 1200px
+}
+
+.main .box {
+	overflow: hidden;
+	margin: 20px 30px;
+	background: #fff;
+	padding-bottom: 20px
+}
+
+.main .box .abc {
+	overflow: hidden;
+	margin: 30px 10px 0px;
+	background: #fff;
+	/* padding-bottom: 20px */
+}
+
+.main .box .sub-category>div {
+	padding: 12px 0 0 2.1%;
+	font-size: 18px
+}
+
+
+
+
+
+
+
+.main .box .item .logo {
+	height: 40px;
+	position: relative;
+	font-size: 14px;
+	font-weight: 700;
+	color: #3273dc;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	padding: 0 .1rem
+}
+
+.main .box .item .logo img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	vertical-align: middle
+}
+
+.main .box .item .desc {
+	color: gray;
+	font-size: 12px;
+	padding-top: 10px;
+	height: 35px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical
+}
+
+.footer {
+	width: 100%;
+	bottom: 0;
+	line-height: 45px;
+	background: #fff;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, .2)
+}
+
+.footer .copyright {
+	margin-left: 30px;
+	color: #949494;
+	font-size: 12px
+}
+
+.footer .copyright a {
+	text-decoration: none;
+	color: #3a85ff
+}
+
+
+
+
+
+
+
+
+
+/* 
+#menu-box {
+	display: none;
+	width: 100%;
+	background: #fff;
+	text-align: right;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	box-shadow: 1px 1px 8px #e0ddf;
+	height: 50px
+}
+
+#menu-box #menu {
+	height: 50px;
+	width: 40px;
+	position: absolute;
+	right: 10px
+}
+
+#menu-box #menu * {
+	transition: all .3s;
+	-webkit-transition: all .3s;
+	box-sizing: border-box
+}
+
+#menu-box #menu input[type=checkbox] {
+	display: none
+}
+
+#menu-box #menu input[type=checkbox]:checked~.menu-spin>.horizontal {
+	opacity: 0
+}
+
+#menu-box #menu input[type=checkbox]:checked~.menu-spin>.line-1 {
+	transform: rotate(405deg);
+	-webkit-transform: rotate(405deg);
+	margin-top: 10px
+}
+
+#menu-box #menu input[type=checkbox]:checked~.menu-spin>.line-2 {
+	transform: rotate(-405deg);
+	-webkit-transform: rotate(-405deg);
+	margin-top: -10px
+}
+
+#menu-box #menu label {
+	cursor: pointer;
+	position: absolute;
+	z-index: 99;
+	height: 100%;
+	width: 100%;
+	top: 10px;
+	left: 0
+}
+
+#menu-box #menu label .line {
+	position: absolute;
+	height: 4px;
+	width: 100%;
+	background-color: #a2a2a2
+}
+
+#menu-box #menu label .horizontal {
+	top: 10px
+}
+
+#menu-box #menu label .line-2 {
+	top: 20px
+}
+ */
+.download a,
+.download i {
+	color: #3668bd !important
+}
+
+
+
+
+
+
+
+
+
+#fixedBar {
+	padding: 10px;
+	background: #00aa00;
+	width: 25px;
+	height: 25px;
+	position: fixed;
+	right: 10px;
+	bottom: 30px;
+	z-index: 9999;
+	box-shadow: 0 0 20 #eee;
+	box-shadow: 0 0 20px #ccc;
+	cursor: pointer;
+	display: none
+}
+
+#fixedBar svg {
+	/* 中间箭头颜色填充 */
+	color: #9e1590
+}
+
+
+
+
+
+
+/* 以下几种.itme样式 , 是在不同页面宽度下有不同的表现形式 */
+/* 这是原始样式 */
+
+/* item  */
+/* 以下是默认第一种样式  */
+.main .box .item {
+	width: 20%;
+	/* 宽度 */
+	border: 1px solid #e4ecf3;
+	/* 边框属性 */
+	box-shadow: 1px 2px 3px #f2f6f8;
+	/* 向 框 添加一个或多个阴影  向右 1px ; 向下 2px ; 模糊度3px*/
+	border-radius: 6px;
+	/* 向 div 元素添加圆角边框 */
+	background: #fff;
+	/* 背景属性 */
+	padding: 2px;
+	/* 元素的 4 个内边距,依次为 上 右 下 左 ，如果只有三个数，则为 上 右 下 ，如果只有两个数，则为 上下 左右 ，如果只有1个数，则4个内边距都相同 */
+	min-width: 200px;
+	/* 最小宽度 */
+	margin: 5px 0 0 2.1%;
+	/* 元素的 4 个外边距 ，解释同上面的 内边距 */
+	float: left;
+	/* 图像向左浮动 left 元素向左浮动;right 元素向右浮动;none	默认值,元素不浮动，并会显示在其在文本中出现的位置;inherit 规定应该从父元素继承 float 属性的值 */
+	overflow: hidden;
+	/* overflow 属性规定当内容溢出元素框时发生的事情  visible: 默认值,内容不会被修剪，会呈现在元素框之外; hidden 内容会被修剪，并且其余内容是不可见的 ; scroll	内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容 ; auto	如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容 inherit	规定应该从父元素继承 overflow 属性的值。*/
+	transition: all .3s
+		/* 把鼠标指针放到 该 元素上，在0.3秒内，其宽度会从 当前值100px 逐渐变为 预设值300px */
+}
+
+.main .box .item:hover {
+	transform: translateY(-2px);
+	/* 旋转 div 元素，通过设置 Y 轴的值来定义缩放转换 */
+	background-color: #ffb972
+		/* 设置元素的背景颜色 */
+		/* 鼠标划过时,文本框向上弹起 2 px */
+}
+
+.main .box .item .no-logo {
+	color: #000000;
+	/* 字体颜色 */
+	font-weight: 550;
+	/* 字体粗细 550 */
+	font-size: 14px
+		/* 字体大小 14px */
+
+}
+
+/* 页面 最大 宽度 481px 时 */
+@media screen and (max-width:481px) {
+	.container .box .item {
+		width: 39%;
+		min-width: 100px
+	}
+
+	.container .main {
+		margin-left: 0
+	}
+
+	.container .left-bar {
+		z-index: 999;
+		left: -249px
+	}
+
+	#menu-box {
+		display: block
+	}
+}
+
+/* 页面 最小 宽度 481px 时 */
+/* screen:用于电脑屏幕，平板，智能手机等 */
+/* screen可以改成
+all	用于所有多媒体类型设备
+print	用于打印机
+screen	用于电脑屏幕，平板，智能手机等。
+speech	用于屏幕阅读器 */
+@media screen and (min-width:481px) {
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 481px -789px 时 */
+@media screen and (min-width:482px) and (max-width:789px) {
+	.container .box .item {
+		width: 90%
+	}
+
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 790px - 1039px 时 */
+@media screen and (min-width:790px) and (max-width:1039px) {
+	.container .box .item {
+		width: 43%
+	}
+}
+
+/* 页面宽度在 1040px -1920px 时 */
+@media screen and (min-width:1040px) and (max-width:1920px) {
+	.container .box .item {
+		width: 20%
+	}
+}
+
+
+
+
+
+
+/* .item1 */
+/* 以下是 第二种 样式，仅修改背景颜色，还需同时修改下面三个 样式 */
+.main .box .item1 {
+	width: 20%;
+	border: 1px solid #e4ecf3;
+	box-shadow: 1px 2px 3px #f2f6f8;
+	border-radius: 6px;
+	background: #fff93a;
+	padding: 2px;
+	min-width: 200px;
+	margin: 5px 0 0 2.1%;
+	float: left;
+	overflow: hidden;
+	transition: all .3s
+}
+
+.main .box .item1:hover {
+	transform: translateY(-2px);
+	background-color: #ffb972
+		/* 鼠标划过时,文本框向上弹起 2 px */
+}
+
+.main .box .item1 .no-logo {
+	color: #3273dc;
+	/* 字体颜色 */
+	font-weight: 550;
+	/* 字体粗细 550 */
+	font-size: 14px
+}
+
+@media screen and (max-width:481px) {
+	.container .box .item1 {
+		width: 39%;
+		min-width: 100px
+	}
+
+	.container .main {
+		margin-left: 0
+	}
+
+	.container .left-bar {
+		z-index: 999;
+		left: -249px
+	}
+
+	#menu-box {
+		display: block
+	}
+}
+
+/* 页面宽度 481px 时 */
+@media screen and (min-width:481px) {
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 482px -789px 时 */
+@media screen and (min-width:482px) and (max-width:789px) {
+	.container .box .item1 {
+		width: 90%
+	}
+
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 790px - 1039px 时 */
+@media screen and (min-width:790px) and (max-width:1039px) {
+	.container .box .item1 {
+		width: 43%
+	}
+}
+
+@media screen and (min-width:1040px) and (max-width:1920px) {
+	.container .box .item1 {
+		width: 20%
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .item2 */
+
+/* 以下是 第 3 种 样式，仅修改背景颜色，还需同时修改下面三个 样式 */
+.main .box .item2 {
+	width: 20%;
+	border: 1px solid #e4ecf3;
+	box-shadow: 1px 2px 3px #f2f6f8;
+	border-radius: 6px;
+	background: #ffb5ab;
+	padding: 2px;
+	min-width: 200px;
+	margin: 5px 0 0 2.1%;
+	float: left;
+	overflow: hidden;
+	transition: all .3s
+}
+
+.main .box .item2:hover {
+	transform: translateY(-2px);
+	background-color: #ffb972
+		/* 鼠标划过时,文本框向上弹起 2 px */
+}
+
+.main .box .item2 .no-logo {
+	color: #3273dc;
+	/* 字体颜色 */
+	font-weight: 550;
+	/* 字体粗细 550 */
+	font-size: 14px
+}
+
+/* 页面宽度 481px 时 */
+@media screen and (max-width:481px) {
+	.container .box .item2 {
+		width: 39%;
+		min-width: 100px
+	}
+
+	.container .main {
+		margin-left: 0
+	}
+
+	.container .left-bar {
+		z-index: 999;
+		left: -249px
+	}
+
+	#menu-box {
+		display: block
+	}
+}
+
+/* 页面宽度 481px 时 */
+@media screen and (min-width:481px) {
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 482px -789px 时 */
+@media screen and (min-width:482px) and (max-width:789px) {
+	.container .box .item2 {
+		width: 90%
+	}
+
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 790px - 1039px 时 */
+@media screen and (min-width:790px) and (max-width:1039px) {
+	.container .box .item2 {
+		width: 43%
+	}
+}
+
+/* 页面宽度在 1040px -1920px 时 */
+@media screen and (min-width:1040px) and (max-width:1920px) {
+	.container .box .item2 {
+		width: 20%
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/* .item3 */
+
+/* 以下是 第 4 种 样式，仅修改背景颜色，还需同时修改下面三个 样式 */
+.main .box .item3 {
+	width: 20%;
+	border: 1px solid #e4ecf3;
+	box-shadow: 1px 1px 2px 1px #6dff57;
+	border-radius: 6px;
+	background: #ffffff;
+	padding: 2px;
+	min-width: 80px;
+	margin: 5px 0 0 2.1%;
+	float: left;
+	overflow: hidden;
+	transition: all .3s
+}
+
+.main .box .item3:hover {
+	transform: translateY(-2px);
+	background-color: #ffb972
+		/* 鼠标划过时,文本框向上弹起 2 px */
+}
+
+.main .box .item3 .no-logo {
+	color: #000000;
+	/* 字体颜色 */
+	font-weight: 550;
+	/* 字体粗细 550 */
+	font-size: 14px
+}
+
+/* 页面宽度 481px 时 */
+@media screen and (max-width:481px) {
+	.container .box .item3 {
+		width: 39%;
+		min-width: 100px
+	}
+
+	.container .main {
+		margin-left: 0
+	}
+
+	.container .left-bar {
+		z-index: 999;
+		left: -249px
+	}
+
+	#menu-box {
+		display: block
+	}
+}
+
+/* 页面宽度 481px 时 */
+@media screen and (min-width:481px) {
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 482px -789px 时 */
+@media screen and (min-width:481px) and (max-width:789px) {
+	.container .box .item3 {
+		width: 5%
+	}
+
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 790px - 1039px 时 */
+@media screen and (min-width:790px) and (max-width:1039px) {
+	.container .box .item3 {
+		width: 5%
+	}
+}
+
+/* 页面宽度在 1040px -1920px 时 */
+@media screen and (min-width:1040px) and (max-width:1920px) {
+	.container .box .item3 {
+		width: 5%
+	}
+}
+
+
+
+
+
+
+
+
+/* .item4 */
+
+/* 以下是 .item4 第 5 种 样式，作为页内副标题使用 ，仅修改背景颜色，还需同时修改下面三个 样式 */
+.main .box .item4 {
+	width: 20%;
+	border: 1px solid #e4ecf3;
+	box-shadow: 1px 2px 3px #f2f6f8;
+	border-radius: 6px;
+	background: #dada56;
+	padding: 2px;
+	min-width: 200px;
+	margin: 5px 0 0 2.1%;
+	float: left;
+	overflow: hidden;
+	transition: all .3s
+}
+
+.main .box .item4:hover {
+	transform: translateY(-2px);
+	background-color: #ffb972
+		/* 鼠标划过时,文本框向上弹起 2 px */
+}
+
+.main .box .item4 .no-logo {
+	color: #3273dc;
+	/* 字体颜色 */
+	font-weight: 550;
+	/* 字体粗细 550 */
+	font-size: 14px
+}
+
+/* 下面两条，新增样式4,与上面 .item4 相同作为副标题使用,任意页面宽度下,文本框占据93% */
+
+/* 页面宽度 481px 时 */
+@media screen and (max-width:481px) {
+	.container .box .item4 {
+		width: 90%;
+		min-width: 100px
+	}
+
+	.container .main {
+		margin-left: 0
+	}
+
+	.container .left-bar {
+		z-index: 999;
+		left: -249px
+	}
+
+	#menu-box {
+		display: block
+	}
+}
+
+/* 页面宽度 481px 时 */
+@media screen and (min-width:481px) {
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 482px -789px 时 */
+@media screen and (min-width:482px) and (max-width:789px) {
+	.container .box .item4 {
+		width: 90%
+	}
+
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 790px - 1039px 时 */
+@media screen and (min-width:790px) and (max-width:1039px) {
+	.container .box .item4 {
+		width: 93%
+	}
+}
+
+/* 页面宽度在 1040px -1920px 时 */
+@media screen and (min-width:1040px) and (max-width:1920px) {
+	.container .box .item4 {
+		width: 90%
+	}
+}
+
+
+
+
+
+
+
+/* .item5 */
+
+/* 以下是 .item5 第 6 种 样式，作为页内副标题使用 ，仅修改背景颜色，还需同时修改下面三个 样式 */
+.main .box .item5 {
+	width: 20%;
+	border: 1px solid #ffffff;
+	box-shadow: 1px -2px 2px #a5a552;
+	border-radius: 6px;
+	background: #aaaaff;
+	padding: 2px;
+	min-width: 200px;
+	margin: 5px 0 0 2.1%;
+	float: left;
+	overflow: hidden;
+	transition: all .3s
+}
+
+.main .box .item5:hover {
+	transform: translateY(-2px);
+	background-color: #ffb972
+		/* 鼠标划过时,文本框向上弹起 2 px */
+}
+
+.main .box .item5 .no-logo {
+	color: #000000;
+	/* 字体颜色 */
+	font-weight: 550;
+	/* 字体粗细 550 */
+	font-size: 14px
+}
+
+/* 下面两条，新增样式4,与上面 .item5 相同作为副标题使用,任意页面宽度下,文本框占据93% */
+
+/* 页面宽度 481px 时 */
+@media screen and (max-width:481px) {
+	.container .box .item5 {
+		width: 90%;
+		min-width: 80px
+	}
+
+	.container .main {
+		margin-left: 0
+	}
+
+	.container .left-bar {
+		z-index: 999;
+		left: -249px
+	}
+
+	#menu-box {
+		display: block
+	}
+}
+
+/* 页面宽度 481px 时 */
+@media screen and (min-width:481px) {
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 482px -789px 时 */
+@media screen and (min-width:482px) and (max-width:789px) {
+	.container .box .item5 {
+		width: 90%
+	}
+
+	.container .left-bar {
+		left: 0
+	}
+}
+
+/* 页面宽度在 790px - 1039px 时 */
+@media screen and (min-width:790px) and (max-width:1039px) {
+	.container .box .item5 {
+		width: 93%
+	}
+}
+
+/* 页面宽度在 1040px -1920px 时 */
+@media screen and (min-width:1040px) and (max-width:1920px) {
+	.container .box .item5 {
+		width: 90%
+	}
+}
+
+
+
+
+/* 此<  .icon --style> 是配合图标 js---iconfont.js一起配合使用的 */
+.icon {
+	/*将icon大小设置和字体大小一致，后续在通过svg-icon 使用icon的时候，可直接设置图标的font-size即可控制图标大小 */
+	/* 
+					这是默认值
+						width: 1em;
+						height: 1em;
+						vertical-align: -0.15em;
+						fill: currentColor;
+						overflow: hidden; 
+					这是默认值
+					*/
+	width: 1em;
+	/* 宽 */
+	height: 1em;
+	/* 高 */
+	vertical-align: -0.15em;
+	/* 设置一个元素的垂直对齐。 向下浮动0.15em */
+	fill: currentColor;
+	/* 定义元素的颜色，currentColor是一个变量，这个变量的值就表示当前元素的color值，如果当前元素未设置color值，则从父元素继承 */
+	overflow: hidden;
+	/* 给一个元素中设置overflow:hidden，那么该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位 */
+	font-size: 17px;
+}
+
+.icona {
+	/*将icon大小设置和字体大小一致，后续在通过svg-icon 使用icon的时候，可直接设置图标的font-size即可控制图标大小 */
+	/* 
+					这是默认值
+						width: 1em;
+						height: 1em;
+						vertical-align: -0.15em;
+						fill: currentColor;
+						overflow: hidden; 
+					这是默认值
+					*/
+	width: 1em;
+	/* 宽 */
+	height: 1em;
+	/* 高 */
+	float: right;
+	/* 元素靠右 */
+	vertical-align: -0.15em;
+	/* 设置一个元素的垂直对齐。 向下浮动0.15em */
+	fill: currentColor;
+	/* 定义元素的颜色，currentColor是一个变量，这个变量的值就表示当前元素的color值，如果当前元素未设置color值，则从父元素继承 */
+	overflow: hidden;
+	/* 给一个元素中设置overflow:hidden，那么该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位 */
+	font-size: 17px;
+}
+
+/* 设置网络获取到的图标大小 */
+.icons {
+	width: 20px;
+	height: 20px;
+	vertical-align: -0.15em;
+	/* 设置一个元素的垂直对齐。 向下浮动0.15em */
+}
+
+
+/* 悬浮搜索框,搜索本页文字内容，悬浮搜索框样式表 */
+#search-container {
+	position: fixed;
+	top: 10px;
+	right: 5px;
+	z-index: 999;
+	background-color: #aeff90;
+	padding: 5px;
+}
+
+/* 集成菜单到悬浮搜索框 */
+#search-container label {
+	font-size: 16px;
+}
+
+input#search {
+	width: 230px;
+	height: 35px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>倒计时</title>
+	</head>
+	<body>
+		<div id="countdown">
+			分别显示：
+			<span id="days"></span> 天
+			<span id="hours"></span> 小时
+			<span id="minutes"></span> 分钟
+			<span id="seconds"></span> 秒钟
+			<span id="milliseconds"></span> 毫秒
+		</div>
+		<div>
+			合并显示 剩余时间1：
+			<span id="countdown1"></span>
+		</div>
+
+		<div>
+			合并显示 剩余时间2：
+			<span id="countdown2"></span>
+		</div>
+		<div>
+
+			总的小时数： 距离倒计时结束还剩<span id="totalHours"></span>小时
+		</div>
+		<div>
+			总的分钟数：
+			<span id="totalMinutes"></span> 分钟
+		</div>
+
+		<div>
+			总的秒钟数：
+			<span id="totalSeconds"></span> 秒钟
+		</div>
+		<div>
+			总的秒钟数：
+			<span id="totalMilliseconds"></span> 毫秒
+		</div>
+
+		<script>
+			// 目标日期和时间
+			var targetDate = new Date("2023-08-01T00:00:00");
+
+			// 更新倒计时
+			function updateCountdown() {
+				var now = new Date();
+				var timeLeft = targetDate - now;
+
+				// 计算剩余的天数、小时数、分钟数、秒钟数和毫秒数
+				var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+				var milliseconds = timeLeft % 1000;
+
+				// 更新页面上的倒计时显示
+				document.getElementById("days").innerText = days;
+				document.getElementById("hours").innerText = hours;
+				document.getElementById("minutes").innerText = minutes;
+				document.getElementById("seconds").innerText = seconds;
+				document.getElementById("milliseconds").innerText = milliseconds;
+
+				// 更新剩余时间显示1
+				document.getElementById("countdown1").innerText = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds +
+					"秒钟 " + milliseconds + "毫秒";
+
+				// 更新剩余时间显示2
+				document.getElementById("countdown2").innerText = days + "天 " + hours + "小时 " + minutes + "分钟 " + seconds +
+					"秒钟 " + milliseconds + "毫秒";
+
+				// 计算总的小时数
+				var totalHours = days * 24 + hours;
+				// 显示总的小时数
+				document.getElementById("totalHours").innerText = totalHours;
+
+
+				// 计算总的分钟数
+				var totalMinutes = totalHours * 60 + minutes;
+				// 显示总的分钟数
+				document.getElementById("totalMinutes").innerText = totalMinutes;
+
+				// 计算总的秒钟数
+				var totalSeconds = totalMinutes * 60 + seconds;
+				// 显示总的秒钟数
+				document.getElementById("totalSeconds").innerText = totalSeconds;
+
+				// 计算总的毫秒数
+				var totalMilliseconds = totalSeconds * 1000 + milliseconds;
+				// 显示总的毫秒数
+				document.getElementById("totalMilliseconds").innerText = totalMilliseconds;
+
+				// 每毫秒更新一次倒计时
+				setTimeout(updateCountdown, 1);
+				//如果你只想调用一次显示倒计时，可以将 setTimeout 函数替换为 setInterval 函数。这样，倒计时将在页面加载后立即开始，并且不会自动更新。
+				//即删除  setTimeout 函数
+			}
+
+			// 启动倒计时
+			updateCountdown();
+		</script>
+	</body>
+</html>

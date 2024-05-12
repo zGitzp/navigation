@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>提交数据到飞书Webhook</title>
+
+	</head>
+	<body>
+		<h1>提交数据到飞书Webhook</h1>
+
+		<form id="myForm">
+			<input type="text" name="message" placeholder="请输入需要提交的消息">
+
+			<p>
+				<button type="submit">提交数据</button>
+			</p>
+		</form>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				var form = document.getElementById('myForm');
+				form.addEventListener('submit', function(e) {
+					e.preventDefault();
+
+					var webhookUrl =
+						'https://open.feishu.cn/open-apis/bot/v2/hook/5fc813da-55a6-43b8-ab1f-2214f6ede6f7'; // 替换为你的 webhook 地址
+					var messageElement = document.getElementsByName('message')[0];
+					var message = messageElement.value;
+
+					// 构建请求体
+					var requestBody = JSON.stringify({
+						"msg_type": "post",
+						"content": {
+							"post": {
+								"zh_cn": {
+									"title": "签到提醒",
+									"content": [
+										[{
+											"tag": "text",
+											"text": message
+										}]
+									]
+								}
+							}
+						}
+					});
+
+					// 发起 POST 请求
+					fetch(webhookUrl, {
+						method: 'POST',
+						mode: 'no-cors', // 嵌入 mode: 'no-cors'
+
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						body: requestBody
+					})
+
+
+				});
+			});
+		</script>
+		<script src="../js/jquery.js"></script>
+		<script>
+			var oMenu = document.getElementById('menu');
+			var oLeftBar = document.getElementById('leftBar');
+			var menuFrom = document.getElementById('menu-form');
+		
+			oMenu.onclick = function() {
+				if (oLeftBar.offsetLeft == 0) {
+					oLeftBar.style.left = -249 + 'px';
+				} else {
+					oLeftBar.style.left = 0;
+				}
+			}
+		
+		
+			// 监听页面宽度变化
+			window.onresize = function() {
+				judgeWidth();
+				// console.log(document.documentElement.clientWidth);
+			};
+		
+			// 判断页面宽度
+			function judgeWidth() {
+				if (document.documentElement.clientWidth > 481) {
+					oLeftBar.style.left = 0;
+				} else {
+					oLeftBar.style.left = -249 + 'px';
+				}
+			}
+		
+			var oNavItem = document.getElementById('navItem');
+			var aA = oNavItem.getElementsByTagName('a');
+			for (var i = 0; i < aA.length; i++) {
+				aA[i].onclick = function() {
+					for (var j = 0; j < aA.length; j++) {
+						aA[j].className = '';
+					}
+					this.className = 'active';
+					if (oLeftBar.offsetLeft == 0) {
+						if (document.documentElement.clientWidth <= 481) {
+							oLeftBar.style.left = -249 + 'px';
+							menuFrom.checked = false;
+						}
+					}
+				}
+			}
+		
+		
+			$(window).scroll(function() {
+				if ($(window).scrollTop() >= 200) {
+					$('#fixedBar').fadeIn(300);
+				} else {
+					$('#fixedBar').fadeOut(300);
+				}
+			});
+			$('#fixedBar').click(function() {
+				$('html,body').animate({
+					scrollTop: '0px'
+				}, 800);
+			})
+		</script>
+	</body>
+</html>

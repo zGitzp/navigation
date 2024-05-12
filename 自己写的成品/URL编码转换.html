@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<title>URL编码转换</title>
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<link rel="stylesheet" href="../css/1.css">
+	</head>
+	<body>
+
+		<div>
+			<div>
+				<div>
+					<h4>Url:</h4>
+					<textarea name="url" id="source" rows="5" class="textareas form-control">输入编码</textarea>
+				</div>
+				<div style="float:left">
+					<div>
+						<label class="radio" id="en_tip" style="margin-left:20px;" data-original-title=""><input
+								type="radio" name="_type" checked="checked">encodeURI</label>
+						<label class="radio" id="co_tip" style="margin-left:20px;" data-original-title=""><input
+								type="radio" name="_type" id="co_t">encodeURIComponent</label>
+						<button class="btn btn-primary" onclick="javascript:encode_uri();">URL编码↓</button>
+						<button class="btn btn-primary" onclick="javascript:decode_uri();">URL解码↑</button>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+				<div>
+					<h4>编码结果:</h4>
+					<textarea name="message" id="result" rows="5" class="textareas form-control"></textarea>
+				</div>
+				<script>
+					$(document).ready(function() {
+						$("#en_tip").popover({
+							'title': 'encodeURI',
+							'content': '使用Javascript encodeURI() 函数，用于完整的URL编码。',
+							'placement': 'right'
+						});
+						$("#co_tip").popover({
+							'title': 'encodeURIComponent',
+							'content': '使用Javascript encodeURIComponent() 函数，用于拼接URL的参数。',
+							'placement': 'right'
+						});
+					});
+
+					function encode_uri() {
+						if ($("#co_t").attr("checked"))
+							$("#result").val(encodeURIComponent($("#source").val()));
+						else
+							$("#result").val(encodeURI($("#source").val()));
+					}
+
+					function decode_uri() {
+						if ($("#co_t").attr("checked"))
+							$("#source").val(decodeURIComponent($("#result").val()));
+						else
+							$("#source").val(decodeURI($("#result").val()));
+					}
+				</script>
+			</div>
+		</div>
+
+		<footer class="footer">
+
+			<div>
+				
+				<!-- 原网页地址 -->
+				<a target="_blank" href="http://tools.jb51.net/static/encodetxt/urlencode_decode/index.html">原网页地址-脚本之家</a>
+				<a target="_blank" href="http://tools.jb51.net">脚本之家 在线工具</a>
+			</div>
+
+		</footer>
+
+	</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>穿透技术</title>
+		<link rel="shortcut icon" href="favcion.ico" />
+		<link rel="stylesheet" href=" css/iconfont.css">
+		<link rel="stylesheet" href="../plug-in/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+		<div class="container" id="container">
+			<aside class="left-bar" id="leftBar">
+				<div class="title">
+					<p>穿透技术</p>
+				</div>
+				<nav class="nav">
+					<!-- <div class="item active"><a href=""><i class="iconfont icon-daohang2"></i>飞叶导航http://ifeiye.gitee.io/dh/</a><i class="line"></i></div> -->
+					<ul class="nav-item" id="navItem">
+
+						<li><a href="#1"><i class="iconfont icon-yunying"></i>nps内网穿透【p2p模式】详细教程-纯净docker方式</a></li>
+						<li><a href="#3"><i class="iconfont icon-shequ"></i> </a></li>
+						<li><a href="#4"><i class="iconfont icon-blogger"></i> </a></li>
+					</ul>
+					<!-- <div class="item comment"><a target="_blank" href="http://ifeiye.gitee.io/dh/liuyan/index.html"><i class="iconfont icon-liuyan"></i>留言</a></div> -->
+				</nav>
+			</aside>
+			<section class="main">
+				<div id="mainContent">
+					<!-- 手机端菜单 -->
+					<div id="menu-box">
+						<div id="menu">
+							<input type="checkbox" id="menu-form">
+							<label for="menu-form" class="menu-spin">
+								<div class="line diagonal line-1"></div>
+								<div class="line horizontal"></div>
+								<div class="line diagonal line-2"></div>
+							</label>
+						</div>
+					</div>
+					<!-- 一号专区 -->
+					<div class="box">
+						<a href="#" name="1"></a>
+						<div class="sub-category">
+							<div><i class="iconfont icon-yunying"></i>nps内网穿透【p2p模式】详细教程-纯净docker方式</div>
+						</div>
+						<div>
+							<br><br>
+							<a target="_blank"
+								href="https://www.52pojie.cn/thread-1402453-1-1.html">nps内网穿透【p2p模式】详细教程-纯净docker方式---吾爱破解原网页链接</a><br>
+							<br>
+							<a target="_blank" href="./img/chuantou/原网页PDf格式.pdf">吾爱破解原网页 PDF 格式文件</a><br>
+							<br>
+							<br>
+							<br>
+							<font color="Blue">
+								<font face="微软雅黑, Tahoma, &amp;quot">
+									<font style="font-size:15px">
+										0：为什么要用P2P模式，因为点对点，不消耗你VPS或独服的流量，假如你买的是国内VPS或独服本身因为价格和国情的原因，流量就吃紧，假如要传送一个几十G的数据，用传统TCP<strong>
+											<font color="#FF0000">穿透</font>
+										</strong>模式，你传送多少流量，你的VPS就消耗多少流量，而且p2p模式一旦握手成功，就直接交给2端独立通讯，自身是断开的，并且速度快于TCP
+										<br>
+										<br>
+										1：首先准备一台有公网IP的VPS或独服（作为NPS服务端，在P2P模式下确切的说是验证握手中间端，除非你作为TCP模式下的穿透，那么就真的是一个服务端了。）
+										<br>
+										<br>
+										2：在VPS或安装好docker(怎么安装docker就不说了，太简单了。)
+										<br>
+										<br>
+										安装NPS的Docker镜像我这里选择的是ffdfgdfg/nps，只需2条命令：
+										<br>
+										<br>
+										①docker pull ffdfgdfg/nps
+										<br>
+										<br>
+										②docker run -d --restart=always --name nps --net=host -v
+										/root/docker/nps/conf:/conf ffdfgdfg/nps
+										<br>
+
+										[上面的命令，其中/root/docker/nps/conf可自己指定，我这里是为了方便]
+										<br>
+										<br>
+										<br>
+										<br>
+										3：SSH连接上你的VPS，ffdfgdfg/nps默认nps的配置文件在上面命令指定的目录里，也就是/root/docker/nps/conf
+										<br>
+										<br>
+										vi /root/docker/nps/conf/nps.conf
+										<br>
+										或<br>
+										nano /root/docker/nps/conf/nps.conf
+										<br>
+										<br>
+										打开后编辑以下几个地方即可：
+										<br>
+										<br>
+										①【必须】p2p_ip=121.281.131.127 （<----你VPS或者独服的公网IP地址，记住不要填写域名） <br>
+										p2p_port=6000
+										(<----任意端口，官方默认6000，但是防火墙一定要放行6000-6002,IP段，而不是只放行6000,以此类推，假如你改成7000端口，那么放行7000-7002,很多人穿透失败就是这一步没做)<br>
+										<br>
+										②【必须】web_username=admin (任意用户名)<br>
+
+										web_password=hostloc （任意密码）<br>
+										web_port =8880(&lt;--任意，防火墙记得打开)
+										<br>
+										<br>
+										③【可选】http_proxy_port=800（如果你所在的VPS，80端口已经在用了，这里改一下）<br>
+
+										https_proxy_port=4433 （如果你所在的VPS，443端口已经在用了，这里改一下）<br>
+										<br>
+										④保存退出vi或者nano,并重启一遍镜像。<br>
+										--------------------------------------------------------------------------------------------------------------------------------------<br>
+										虚线以上的安装和设置过程，大家应该还是搞的清楚的，下面就要说一下，应用场景了。<br>
+										<br>
+										①我们刚刚在一台VPS或者独服上，安装了Docker-并部署了nps-但是它现在的身份不是服务端，而是一个中间件，只做验证服务，并不参与2端的传输<br>
+										<br>
+										②假设：我办公室的电脑想用任意（远程桌面软件客户端）-------去连接家里的电脑的任意（远程桌面软件服务端），要怎么做呢？<br>
+										<br>
+										③很简单：把家里电脑（远程桌面的服务端端口）-----用p2p方式穿透到-----办公室电脑（系统下的任意指定端口）中---再用办公室电脑的（远程桌面软件客户端）去连接系统指定的本地的端口。（如果看的有点蒙，就多看几遍。）<br>
+										-----------------------------------------------------------------------------------------------------------------------------------------------<br>
+										实际举例场景：<br>
+										<br>
+										①中国电信，办公室电脑Win10,安装了AnyDesk（作为客户端）<br>
+										<br>
+										②中国移动，家里电脑Win10，安装了AnyDesk(作为服务端，这软件默认端口是7070)<br>
+										<br>
+										③中国移动，家里电脑Win10,上安装NPC客户端(看清楚，是NPC，不是NPS)，有条件的最好装在软路由上，因为电脑经常要重启和关机，我这里就装在家里的软路由上了openwrt_x86_x64,先打开我们刚刚在VPS上安装的NPS看看用NPC去连接的配置信息
+									</font>
+								</font>
+							</font>
+						</div>
+						<p>
+							<img src="./img/chuantou/101.jpg" width="1080" height="610" />
+						</p>
+						<br>
+						<p>
+							<img src="./img/chuantou/102.jpg" width="1080" height="200" />
+						</p>
+						<br>
+						<p style="font-size:20px">
+							④中国移动，打开家里软路由openwrt的NPC插件，根据上面图片中的信息分别填写，公网IP+端口+密码，保存并应用即可。
+						</p>
+						<p>
+							<img src="./img/chuantou/103.jpg" width="1080" height="400" />
+						</p>
+						<br>
+						<p style="font-size:20px">
+							⑤设置NPS，启用其中一个连接方的P2P模式。</p>
+						<br>
+						<p>
+							<img src="./img/chuantou/104.jpg" width="1080" height="400" />
+						</p>
+						<br>
+						<p>
+							<img src="./img/chuantou/105.jpg" width="1080" height="400" />
+						</p>
+						<br>
+						<p style="font-size:20px">
+							⑥在中国电信，办公室电脑里下载官方x64-NPC客户端，并安装成开机自启动服务
+						</p>
+						<br>
+						<p>
+							<img src="./img/chuantou/106.jpg" width="1000" height="800" />
+						</p>
+						<br>
+						<p>
+							<img src="./img/chuantou/107.jpg" width="1000" height="800" />
+						</p>
+						<br>
+						<p>
+							<img src="./img/chuantou/108.jpg" width="500" height="500" />
+						</p>
+						<br>
+						<p>
+							<img src="./img/chuantou/109.jpg" width="1000" height="500" />
+						</p>
+						<br>
+						<p style="font-size:20px">
+							⑦在中国电信，办公室电脑Win10系统中打开AnyDesk,连接上面配置好的本地端口。</p>
+						<br>
+						<p>
+							<img src="./img/chuantou/110.jpg" width="1000" height="200" />
+						</p>
+						<br>
+						<p>
+							<img src="./img/chuantou/111.jpg" width="1000" height="800" />
+						</p>
+						<br><br>
+						<p>
+							------------------------------------------------------------</p><br>
+						<p style="font-size:20px">
+							教程结束，P2P模式，因为只需要验证的流量（极少），所以里传输多大的流量，都不影响VPS或者独服本身的流量，所以会大大减少你购买国内服务器的价格，流量甚至每个月几百M就够用了。</p>
+						<br><br>
+						<p style="font-size:20px">
+							至于你们担心的ISP会QOS限制的问题，只要你是国内运营商连接国内运营商，可以是中国电信，中国移动，中国联通，都不会限制，除非你P2P模式连接的是国外ISP下的一台电脑，那么有可能会限制。
+						</p>
+						<br>
+
+
+
+
+
+						<footer class="footer">
+							<div class="copyright">
+								<div>
+									Copyright © 2020- 2021
+									<!-- 网页布局代码参考飞叶导航 -->
+									<a target="_blank" href="http://ifeiye.com">飞叶导航</a>
+									<!-- 飞叶导航开源地址 -->
+									<a target="_blank" href="https://gitee.com/ifeiye/dh">飞叶导航开源地址</a>
+
+									<!-- 搜索部分参考一纳米导航 -->
+									<a target="_blank" href="http://www.1nami.com/">一纳米导航</a>
+								</div>
+							</div>
+						</footer>
+						<div id="fixedBar"><svg class="Zi Zi--BackToTop" title="回到顶部" fill="currentColor"
+								viewBox="0 0 24 24" width="24" height="24">
+								<path
+									d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z">
+								</path>
+							</svg></div>
+			</section>
+			<script src="js/jquery.js"></script>
+			<script>
+				var oMenu = document.getElementById('menu');
+				var oLeftBar = document.getElementById('leftBar');
+				var menuFrom = document.getElementById('menu-form');
+
+				oMenu.onclick = function() {
+					if (oLeftBar.offsetLeft == 0) {
+						oLeftBar.style.left = -249 + 'px';
+					} else {
+						oLeftBar.style.left = 0;
+					}
+				}
+
+
+				// 监听页面宽度变化
+				window.onresize = function() {
+					judgeWidth();
+					// console.log(document.documentElement.clientWidth);
+				};
+
+				// 判断页面宽度
+				function judgeWidth() {
+					if (document.documentElement.clientWidth > 481) {
+						oLeftBar.style.left = 0;
+					} else {
+						oLeftBar.style.left = -249 + 'px';
+					}
+				}
+
+
+				var oNavItem = document.getElementById('navItem');
+				var aA = oNavItem.getElementsByTagName('a');
+				for (var i = 0; i < aA.length; i++) {
+					aA[i].onclick = function() {
+						for (var j = 0; j < aA.length; j++) {
+							aA[j].className = '';
+						}
+						this.className = 'active';
+						if (oLeftBar.offsetLeft == 0) {
+							if (document.documentElement.clientWidth <= 481) {
+								oLeftBar.style.left = -249 + 'px';
+								menuFrom.checked = false;
+
+							}
+						}
+					}
+				}
+
+
+				$(window).scroll(function() {
+					if ($(window).scrollTop() >= 200) {
+						$('#fixedBar').fadeIn(300);
+					} else {
+						$('#fixedBar').fadeOut(300);
+					}
+				});
+				$('#fixedBar').click(function() {
+					$('html,body').animate({
+						scrollTop: '0px'
+					}, 800);
+				})
+			</script>
+	</body>
+
+</html>

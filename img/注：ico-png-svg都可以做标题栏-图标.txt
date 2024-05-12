@@ -1,0 +1,15 @@
+说明：
+
+注：ico-png-svg都可以做标题栏-图标
+
+ico需要转格式，转格式之后会比下面两个 png - svg 模糊一些；
+png-svg 可以在阿里图标库直接下载，会清晰一些
+
+
+阿里图标库地址
+https://www.iconfont.cn/
+
+
+H图标  svg代码
+
+<svg t="1680943518016" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3349" width="200" height="200"><path d="M235.5 871.691v-740h98v304h385v-304h98v740h-98v-349h-385v349h-98z" p-id="3350" fill="#1afa29"></path></svg>

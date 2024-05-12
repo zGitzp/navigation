@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta Content-Type="text/html" charset="utf-8">
+		<!-- <meta content-type:="text/html" text="" html;="" charset="utf-8"> -->
+
+		<!-- 15秒自动刷新 -->
+		<!-- <meta http-equiv="refresh" content="15"> -->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>自己的导航站</title>
+		<link rel="shortcut icon" href="./img/tubiao.svg" />
+
+		<!-- 以下为点击链接弹出密码输入选项的js代码，默认密码 1024  已取消  -->
+		<!-- <script src="js/jiami2.js"></script> -->
+
+		<!-- 一下这条是老版本图标css文件，但2023.4.23更新图标版本后这条放弃使用，使用方法在“版本说明手册.md”里面 -->
+		<!-- <link rel="stylesheet" href="css/iconfont.css"> -->
+
+		<!-- 以下这条为测试使用起点图标，为了减小图标文件大小，但作用不大，网络不稳定会很卡，遂放弃，纯测试使用 -->
+		<!-- <link rel="shortcut icon" href="https://qdfepccdn.qidian.com/www.qidian.com/favicon/qd_icon.ico" /> -->
+
+		<!-- 以下这条css为本地代码格式 -->
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- 以下这条为测试使用，默认css,一般属性都有 -->
+		<!-- <link rel="stylesheet" href="css/1.css"> -->
+
+		<!-- 以下这条是为了测试在线使用css，以达到减小文件的作用，但作用不大，遂放弃，但保留链接 -->
+		<!-- <link rel="stylesheet" href="https://cdn.staticaly.com/gh/zGitzp/test01/main/style.css"> -->
+
+		<!-- 以下这条图标js，是本地js文件，但放在css文件夹里面，因为这是图标js -->
+		<script src="css/iconfont.js"></script>
+		<!-- 以下图标js文件为临时使用 调试专用 随时会过期-2023.4.23 -->
+		<!-- <script src="http://at.alicdn.com/t/c/font_2983800_6t0gef854pf.js"></script> -->
+		<style>
+			/* 此<style> 是配合图标js---iconfont.js一起配合使用的 */
+			/* .icon样式已集成到 style.css- .icon 里面 */
+			/*将icon大小设置和字体大小一致，后续在通过svg-icon 使用icon的时候，可直接设置图标的font-size即可控制图标大小 */
+
+			/* 悬浮搜索框样式,已集成到style.css- #search-container 里面 */
+			/* 搜索框样式 */
+			.search-box {
+				position: fixed;
+				top: 10px;
+				right: 10px;
+				z-index: 1000;
+			}
+			
+			/* 高亮样式 */
+			.highlight {
+				background-color: yellow;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container" id="container">
+			<aside class="left-bar" id="leftBar">
+				<div class="title">
+					<p>A 自己测试</p>
+				</div>
+				<nav class="nav">
+					<ul class="nav-item" id="navItem">
+						<li><a href="#top" class="active">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-zuijinchangyong1"></use>
+								</svg>
+								B 常用
+							</a>
+						</li>
+						<li>
+							<a href="#2">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-wuxing-copy"></use>
+								</svg>
+								C 软件工具
+							</a>
+						</li>
+						<li>
+							<a href="#4">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-wuxing-copy"></use>
+								</svg>
+								D GPT
+							</a>
+						</li>
+						<li>
+							<a href="#3">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-hd-copy"></use>
+								</svg>
+								E 影视网站
+							</a>
+						</li>
+						<li>
+							<a href="#23">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-xinxi2"></use>
+								</svg>
+								F 信息资讯
+							</a>
+						</li>
+						<li>
+							<a href="#24">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-cili"></use>
+								</svg>
+								G 磁力搜索
+							</a>
+						</li>
+						<li>
+							<a href="#25">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-wangpan"></use>
+								</svg>
+								H 网盘汇总
+							</a>
+						</li>
+						<li>
+							<a href="#8">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-xuexi2"></use>
+								</svg>
+								I 学习网站
+							</a>
+						</li>
+						<li>
+							<a href="#22">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-xuexi2"></use>
+								</svg>
+								I C 开发
+							</a>
+						</li>
+						<li>
+							<a href="#5">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-tushu2"></use>
+								</svg>
+								J 图书读物
+							</a>
+						</li>
+						<li>
+							<a href="#6">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-yinpin2"></use>
+								</svg>
+								K 音频下载
+							</a>
+						</li>
+						<li>
+							<a href="#20">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-tupian"></use>
+								</svg>
+								L 图片壁纸
+							</a>
+						</li>
+						<li>
+							<a href="#9">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-luntan2"></use>
+								</svg>
+								M 论坛贴吧
+							</a>
+						</li>
+						<li>
+							<a href="#11">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-youxi2"></use>
+								</svg>
+								N 游戏
+							</a>
+						</li>
+						<li>
+							<a href="#12">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-youxiang1"></use>
+								</svg>
+								O 邮箱
+							</a>
+						</li>
+						
+
+						<li>
+							<a href="#16">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-qiuzhi"></use>
+								</svg>
+								P 求职
+							</a>
+						</li>
+						<li>
+							<a href="#17">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-weixian2"></use>
+								</svg>
+								Q 危险软件分析
+							</a>
+						</li>
+						<li>
+							<a href="#18">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-shouji"></use>
+								</svg>
+								R 短信接码
+							</a>
+						</li>
+
+						<li>
+							<a href="#19">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-youquhaowan-01"></use>
+								</svg>
+								S 有趣网站
+							</a>
+						</li>
+						<li>
+							<a href="#21">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-shoujidiannao"></use>
+								</svg>
+								T 手机电脑刷机
+							</a>
+						</li>
+						<li>
+							<a href="#98">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-fanqiang3"></use>
+								</svg>
+								X 吃瓜
+							</a>
+						</li>
+						<li>
+							<a href="#99">
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-fanqiang3"></use>
+								</svg>
+								Z 翻 出去
+							</a>
+						</li>
+					</ul>
+					
+						<!-- 代码更新 -->
+						<div id="codeAA"></div>
+					
+				</nav>
+			</aside>
+			<body>
+				<div id="search-container">
+					<input type="text" id="search-input" placeholder="仅搜索本页文字内容">
+					<button id="search-button">搜索</button>
+					<button id="menu">菜单</button>
+				</div>
+				<section class="main">
+					<div class="box">
+						<form class="abc">
+							<a href="#" name="0"></a>
+							<div class="search" method="post">
+								<input type="text" id="search" placeholder="回车默认百度搜索~" size="30" style="height: 35px">
+								<!-- 以下第一个为回车默认搜索选项，要更改默认搜索，就把它提到第一行 -->
+								<!-- 微信公众号与微信文章，代码只有数字参数 1和2 的不同，但来源都来自搜狗搜索 -->
+								<!-- 作为模板，在 value 后面添加数据，最后拼接网址，类似于 https://xxxx.search-------------.html
+								需拼接数据要放在括号里面
+								<button class="search-co" type="submit"
+									onclick="window.open(
+									'https://cokemv.co/vodsearch/'+document.getElementById('search').value+'-------------.html')">cokemv电影</button> -->
+
+								<button class="search-wz" type="submit"
+									onclick="window.open(
+										'https://www.wuzhuiso.com/s?q='+document.getElementById('search').value+'&src=srp&fr=none&a=www')">无追</button>
+								<button class="search-bd" type="submit" onclick="window.open(
+										'https://www.baidu.com/s?wd='+document.getElementById('search').value)">百度</button>
+								<button class="search-by" type="submit" onclick="window.open(
+										'https://cn.bing.com/search?q='+document.getElementById('search').value)">必应</button>
+								<button class="search-360" type="submit" onclick="window.open(
+										'https://www.so.com/s?q='+document.getElementById('search').value)">360</button>
+								<button class="search-SG" type="submit" onclick="window.open(
+										'https://www.sogou.com/web?query='+document.getElementById('search').value)">搜狗</button>
+								<button class="search-JRTT" type="submit" onclick="window.open(
+										'https://so.toutiao.com/search?dvpf=pc&keyword='+document.getElementById('search').value)">今日头条</button>
+								<button class="search-ZH" type="submit" onclick="window.open(
+										'https://www.zhihu.com/search?type=content&q='+document.getElementById('search').value)">知乎</button>
+								<button class="search-WXWZ" type="submit" onclick="window.open(
+										'https://weixin.sogou.com/weixin?type=2&query='+document.getElementById('search').value)">微信文章</button>
+								<button class="search-WXGZH" type="submit" onclick="window.open(
+										'https://weixin.sogou.com/weixin?type=1&query='+document.getElementById('search').value)">微信公众号</button>
+								<button class="search-fs" type="submit" onclick="window.open(
+									'https://fsoufsou.com/search?q='+document.getElementById('search').value)">F搜</button>
+								</p>
+								<button class="search-SGFY" type="submit" onclick="window.open(
+										'https://fanyi.sogou.com/text?keyword='+document.getElementById('search').value)">搜狗翻译</button>
+								<button class="search-BDFY" type="submit" onclick="window.open(
+										'https://fanyi.baidu.com/#auto/zh/'+document.getElementById('search').value)">百度翻译</button>
+								<button class="search-BYFY" type="submit" onclick="window.open(
+										'https://cn.bing.com/dict/search?q='+document.getElementById('search').value)">必应翻译</button>
+								<button class="search-YDFY" type="submit" onclick="window.open(
+										'https://dict.youdao.com/w/'+document.getElementById('search').value)">有道翻译</button>
+								<button class="search-YDFY" type="submit" onclick="window.open(
+										'https://dict.eudic.net/dicts/en/'+document.getElementById('search').value)">欧陆词典</button>
+
+								&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+								<button class="search-HD" type="submit" onclick="window.open(
+										'https://www.zdic.net/hans/'+document.getElementById('search').value)">汉典</button>
+								<button class="search-GYCD" type="submit" onclick="window.open(
+										'https://www.moedict.tw/'+document.getElementById('search').value)">国语辞典-台湾</button>
+
+
+								</p>
+								<p>
+									<button class="search-gg" type="submit" onclick="window.open(
+									'https://www.google.com/search?q='+document.getElementById('search').value)">谷歌-翻</button>
+									<button class="search-ggdx" type="submit" onclick="window.open(
+										'https://g.luciaz.me/search?q='+document.getElementById('search').value)">谷歌-大学</button>
+									<button class="search-yandex" type="submit" onclick="window.open(
+										'https://yandex.com/search/?text='+document.getElementById('search').value)">yandex搜索-俄</button>
+
+									&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+
+									<button class="search-cbh" type="submit"
+										onclick="window.open(
+											'https://tv.libvio.cc/search/-------------.html?wd='+document.getElementById('search').value+'&submit=')">libvio</button>
+									<!-- <button class="search-cbh" type="submit" onclick="window.open(
+											'https://tkznp.com/vodsearch/wd/'+document.getElementById('search').value+'.html')">天空影视</button> -->
+
+									<button class="search-555" type="submit"
+											onclick="window.open(
+											'https://555mv.net/vodsearch/'+document.getElementById('search').value+'-------------.html')">555电影</button>
+									
+									<button class="search-cbh" type="submit" onclick="window.open(
+										'https://cupfox.app/search?key='+document.getElementById('search').value)">茶杯狐影视搜索</button>
+									<button class="search-co" type="submit"
+										onclick="window.open(
+										'https://cokemv.co/vodsearch/'+document.getElementById('search').value+'-------------.html')">cokemv电影</button>
+
+									&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+									<button class="search-gitee" type="submit" onclick="window.open(
+										'https://search.gitee.com/?q='+document.getElementById('search').value)">gitee搜索</button>
+									<button class="search-github" type="submit"
+										onclick="window.open(
+										'https://github.com/search?q='+document.getElementById('search').value+'&type=repositories')">github搜索</button>
+									<button class="search-ping" type="submit" onclick="window.open(
+										'https://ping.chinaz.com/'+document.getElementById('search').value)">多ping网站</button>
+									<button class="search-ping" type="submit" onclick="window.open(
+										'https://www.qidian.com/soushu/'+document.getElementById('search').value+'.html')">起点小说搜索</button>
+								</p>
+
+								<!-- 以下为取消或暂时不需要，但恢复后仍然可以使用 -->
+								<!-- 
+								<button class="search-tb" type="submit"
+									onclick="window.open(
+									'https://ai.taobao.com/search/index.htm?pid=mm_你的淘宝pid&amp;key='+document.getElementById('search').value)">淘宝</button>
+								 -->
+
+
+								<!-- 以下为搜索引擎 -->
+								<!-- 
+								 F搜   https://fsoufsou.com/search?q=
+								 百度   https://www.baidu.com/s?wd=
+								 必应   https://cn.bing.com/search?q=
+								 Google   https://www.google.com/search?q=
+								 B站   https://search.bilibili.com/all?keyword=
+								 知乎   https://www.zhihu.com/search?type=content&q=
+								 音乐库   https://t.xxgeek.com/tools/music/?type=netease&name=
+								 壁纸   https://wallhaven.cc/search?q=
+								 百度图片   https://image.baidu.com/search/index?tn=baiduimage&word=
+								 Bing图片http://www.bing.com/images/search?q=
+								 pixabay   https://pixabay.com/zh/images/search/
+								 腾讯   https://v.qq.com/x/search/?q=
+								 抖音   https://www.douyin.com/search/
+								 微信   https://weixin.sogou.com/weixin?type=2&query=
+								 豆瓣   https://www.douban.com/search?q=
+								 贴吧   https://tieba.baidu.com/f/search/res?ie=utf-8&qw=
+								 微博   https://s.weibo.com/weibo?q=
+								 地图   https://amap.com/search?query=
+								 淘宝   https://s.taobao.com/search?q=
+								 京东   https://search.jd.com/Search?keyword=
+								 下厨房   https://www.xiachufang.com/search/?keyword=
+								 快递   https://m.kuaidi100.com/result.jsp?nu=
+								 学术   https://www.8kmm.com/sci?q=
+								 深度学术   https://xueshu.studiodahu.com/scholar?hl=zh-CN&as_sdt=0%2C5&btnG=&q=
+								 烂番薯   https://scholar.lanfanshu.cn/scholar?hl=zh-CN&as_sdt=0%2C5&btnG=&q=
+								 mojeek   https://www.mojeek.com/search?q=
+								 影视大全   https://www.meiju56.com/vodsearch/wd/
+								 影视狗   https://www.dianyinggou.com/so/
+								 茶杯狐   https://cupfox.app/s/
+								 IDOPE   https://idope.se/torrent-list/
+								  -->
+
+							</div>
+						</form>
+					</div>
+
+					<!-- B -->
+					<div id="codeB"></div>
+					<!-- C -->
+					<div id="codeC"></div>
+					<!-- D -->
+					<div id="codeD"></div>
+					<!-- E -->
+					<div id="codeE"></div>
+					<!-- F -->
+					<div id="codeF"></div>
+					<!-- G -->
+					<div id="codeG"></div>
+					<!-- H -->
+					<div id="codeH"></div>
+					<!-- IA -->
+					<div id="codeIA"></div>
+					<!-- IB -->
+					<div id="codeIB"></div>
+					<!-- IB -->
+					<div id="codeIC"></div>
+					<!-- J -->
+					<div id="codeJ"></div>
+					<!-- K -->
+					<div id="codeK"></div>
+					<!-- L -->
+					<div id="codeL"></div>
+					<!-- M -->
+					<div id="codeM"></div>
+					<!-- N -->
+					<div id="codeN"></div>
+					<!-- O -->
+					<div id="codeO"></div>
+					<!-- P -->
+					<div id="codeP"></div>
+					<!-- Q -->
+					<div id="codeQ"></div>
+					<!-- R -->
+					<div id="codeR"></div>
+					<!-- S -->
+					<div id="codeS"></div>
+					<!-- T -->
+					<div id="codeT"></div>
+					
+					
+					
+					<!-- Y 1024 97 -->
+					<!-- <div id="code"></div> -->
+					<!-- X 吃瓜 98 -->
+					<div id="codeX"></div>
+					<!-- Z 翻 99 -->
+					<div id="codeZ"></div>
+					
+					
+
+
+	
+
+					<div class="box">
+						<div class="sub-category">
+							<div><i class="iconfont icon-xuexi"></i>代码 模板</div>
+						</div>
+						<div>
+
+							<a target="_blank" href="https://g.luciaz.me/">
+								<div class="item">
+									<div class="no-logo">谷歌镜像站
+										<dfn title="浙江大学三个问题的答案分别是：心灵之约、水朝夕、csxy@123">-浙江大学</dfn>
+									</div>
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+
+
+					<!-- Y -->
+					<footer class="footer">
+						<div class="copyright">
+							<div>
+								<!-- Copyright © 2020- 2021 -->
+								参考代码
+								<!-- 网页布局代码参考飞叶导航 -->
+								<a target="_blank" href="http://ifeiye.gitee.io/dh/"> 飞叶导航 </a>
+								<!-- 飞叶导航开源地址 -->
+								<a target="_blank" href="https://gitee.com/ifeiye/dh"> 飞叶导航开源地址 </a>
+								<!-- 搜索部分参考一纳米导航 -->
+								<a target="_blank" href="http://www.1nami.com/"> 一纳米导航 </a>
+								
+							</div>
+						</div>
+					</footer>
+					<!-- Z -->
+					<div id="fixedBar"><svg class="Zi Zi--BackToTop" title="回到顶部" fill="currentColor"
+							viewBox="0 0 24 24" width="24" height="24">
+							<path
+								d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z">
+								<!-- <path> 一个向上的箭头 </path> -->
+							</path>
+						</svg></div>
+				</section>
+
+				<script src="js/jquery.js"></script>
+
+				<!-- 以下为base64加密解密。2023.10.9加密已取消 -->
+				<!-- <script src="js/jiami.js"></script> -->
+
+				<!-- 以下为搜索本页内容的悬浮搜索框 -->
+				<script src="js/xuanfu.js"></script>
+				
+				
+				<script src="html/B 常用.js"></script>
+				<script src="html/C 软件工具.js"></script>
+				<script src="html/D - GPT.js"></script>
+				<script src="html/E 影视网站.js"></script>
+				<script src="html/F 信息 资讯.js"></script>
+				<script src="html/G 磁力搜索.js"></script>
+				<script src="html/H 网盘汇总.js"></script>
+				<script src="html/I 学习 A.js"></script>
+				<script src="html/I 学习 B.js"></script>
+				<script src="html/I 开发 C.js"></script>
+				<script src="html/J 图书读物.js"></script>
+				<script src="html/K 音频下载.js"></script>
+				<script src="html/L 图片壁纸.js"></script>
+				<script src="html/M 论坛贴吧.js"></script>
+				<script src="html/N 游戏.js"></script>
+				<script src="html/O 邮箱.js"></script>
+				<script src="html/P 求职.js"></script>
+				<script src="html/Q 危险软件地址分析.js"></script>
+				<script src="html/R 短信接码平台.js"></script>
+				<script src="html/S 有趣的网站.js"></script>
+				<script src="html/T 手机、电脑刷机、机顶盒刷机.js"></script>
+				
+				
+				<!-- AA-代码最后更新时间 -->
+				<script src="html/AA-代码最后更新时间.js"></script>
+				
+				
+				<!-- 51 吃 瓜 -->
+				<script src="html/X 吃瓜.js"></script>
+				<!-- 十四号 翻出去墙 -->
+				<script src="html/Z 翻.js"></script>
+				
+				<script>
+					/* 以下为菜单按钮 */
+					var oMenu = document.getElementById('menu');
+					var oLeftBar = document.getElementById('leftBar');
+					var menuFrom = document.getElementById('menu-form');
+
+					oMenu.onclick = function() {
+						if (oLeftBar.offsetLeft == 0) {
+							oLeftBar.style.left = -249 + 'px';
+						} else {
+							oLeftBar.style.left = 0;
+						}
+					}
+					/* 菜单按钮结束 */
+
+
+					// 监听页面宽度变化
+					window.onresize = function() {
+						judgeWidth();
+						// console.log(document.documentElement.clientWidth);
+					};
+
+					// 判断页面宽度
+					function judgeWidth() {
+						if (document.documentElement.clientWidth > 481) {
+							oLeftBar.style.left = 0;
+						} else {
+							oLeftBar.style.left = -249 + 'px';
+						}
+					}
+
+					var oNavItem = document.getElementById('navItem');
+					var aA = oNavItem.getElementsByTagName('a');
+					for (var i = 0; i < aA.length; i++) {
+						aA[i].onclick = function() {
+							for (var j = 0; j < aA.length; j++) {
+								aA[j].className = '';
+							}
+							this.className = 'active';
+							if (oLeftBar.offsetLeft == 0) {
+								if (document.documentElement.clientWidth <= 481) {
+									oLeftBar.style.left = -249 + 'px';
+									menuFrom.checked = false;
+								}
+							}
+						}
+					}
+
+					$(window).scroll(function() {
+						if ($(window).scrollTop() >= 200) {
+							$('#fixedBar').fadeIn(300);
+						} else {
+							$('#fixedBar').fadeOut(300);
+						}
+					});
+					$('#fixedBar').click(function() {
+						$('html,body').animate({
+							scrollTop: '0px'
+						}, 800);
+					})
+				</script>
+				
+			</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>登录页面</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+		<style>
+			/*    样式代码 */
+		</style>
+	</head>
+	<body>
+
+		<form>
+			<h1>登录页面</h1>
+			<!-- <label for="username">用户名:</label>
+		<input type="text" id="username" name="username" value="admin"> -->
+			<label for="password">密码:</label>
+			<!-- 密码： 1024 -->
+			<input type="password" id="password" name="password">
+			<input type="button" value="登录" onclick="login()">
+		</form>
+
+		<script>
+			// 配置回车键执行登录操作
+			document.addEventListener("keydown", function(event) {
+				if (event.key === "Enter") {
+					login();
+					event.preventDefault();
+				}
+			});
+
+			//使用以下两个函数中的一个就行
+			//var count = 0;
+			var attempts = 0;
+
+			function login() {
+				//var username = document.getElementById("username").value;
+				var password = document.getElementById("password").value;
+
+				//if (username != "admin" || password != "1") {
+				if (password != "1024") {
+					// 密码 1024
+					attempts++;
+					if (attempts === 6) {
+						alert("密码不正确,请重试或使用提示词：10");
+					} else {
+						alert("密码不正确,请再试一次");
+					};
+				} else {
+					// 如果密码正确，则隐藏登陆页面并显示main.js的代码
+					document.getElementsByTagName("form")[0].style.display = "none";
+					// 加载剩余的代码
+					var loadCode = document.createElement("script");
+					loadCode.type = "text/javascript";
+					loadCode.src = "html/Z 1024 h.js";
+					document.body.appendChild(loadCode);
+				}
+			}
+		</script>
+	</body>
+</html>

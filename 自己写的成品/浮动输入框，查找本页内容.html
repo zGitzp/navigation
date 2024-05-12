@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>浮动搜索框示例</title>
+  <style>
+    #search-container {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
+      background-color: #fff;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="search-container">
+    <input type="text" id="search-input">
+    <button id="search-button">搜索</button>
+    <button id="next-button">下一个</button>
+  </div>
+
+  <p>这是一个示例文本，其中包含一些<a href="https://www.example.com">链接</a>和关键词。</p>
+  <p>这是另一个示例文本，其中也包含一些<a href="https://www.example.com">链接</a>和关键词。</p>
+
+  <script>
+    document.getElementById('search-button').addEventListener('click', function() {
+      var searchText = document.getElementById('search-input').value;
+      search(searchText);
+    });
+
+
+    function search(keyword) {
+      var found = window.find(keyword, false, false, true, false, false, false);
+  
+      if (!found) {
+        alert('未找到匹配的关键词');
+      }
+    }
+
+    function findNext() {
+      var found = window.find(keyword, false, false, true, false, false, false);
+  
+      if (!found) {
+        alert('未找到更多匹配的关键词');
+      }
+    }
+  </script>
+</body>
+</html>
