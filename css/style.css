@@ -18,7 +18,8 @@ ul {
 li {
 	list-style: none;
 
-	display: inline;
+	/* display: inline; */
+	display: block;
 	line-height: 24px;
 	height: auto;
 	word-break: break-all;
