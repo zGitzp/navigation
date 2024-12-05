@@ -19,6 +19,7 @@ li {
 	list-style: none;
 
 	/* display: inline; */
+	/* 火狐在使用上面的参数后,左侧菜单栏显示不完全,显示异常,2024年12月5日改为block参数 */
 	display: block;
 	line-height: 24px;
 	height: auto;
