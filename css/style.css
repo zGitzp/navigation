@@ -64,7 +64,7 @@ body {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	-webkit-box-orient: vertical;
+	/* -webkit-box-orient: vertical; */
 	margin-left: 248px
 }
 
@@ -98,7 +98,7 @@ body {
 
 .left-bar .nav {
 	flex: 1;
-	-webkit-box-flex: 1;
+	/* -webkit-box-flex: 1; */
 	flex-grow: 1
 }
 
@@ -230,7 +230,8 @@ button {
 	/* border-width属性设置一个元素的四个边框的宽度。此属性可以有一到四个值。 */
 	border-style: solid;
 	/* border-style属性设置一个元素的四个边框的样式。dotted 点状; solid 实线; double 双线; dashed 虚线； outset 定义 3D outset 边框。其效果取决于 border-color 的值*/
-	border-color: auto;
+	border-color: black;
+	/* 上一行原本为auto,但火狐或报错"预期为颜色，但却得到 'auto'。  解析 'border-color' 的值时出错。  声明被丢弃。",股改为明确的值为black */
 	/* 设置 4 个边框的颜色 */
 	/* border-image: initial; */
 	/* 将图片规定为包围 div 元素的边框 */
@@ -310,7 +311,7 @@ button {
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical
+	/* -webkit-box-orient: vertical */
 }
 
 .footer {
@@ -1037,8 +1038,9 @@ speech	用于屏幕阅读器 */
 	/* 高 */
 	vertical-align: -0.15em;
 	/* 设置一个元素的垂直对齐。 向下浮动0.15em */
-	fill: currentColor;
+	fill: black;
 	/* 定义元素的颜色，currentColor是一个变量，这个变量的值就表示当前元素的color值，如果当前元素未设置color值，则从父元素继承 */
+	/* 2024年12月5日 值改为black */
 	overflow: hidden;
 	/* 给一个元素中设置overflow:hidden，那么该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位 */
 	font-size: 17px;
@@ -1063,8 +1065,9 @@ speech	用于屏幕阅读器 */
 	/* 元素靠右 */
 	vertical-align: -0.15em;
 	/* 设置一个元素的垂直对齐。 向下浮动0.15em */
-	fill: currentColor;
+	fill: black;
 	/* 定义元素的颜色，currentColor是一个变量，这个变量的值就表示当前元素的color值，如果当前元素未设置color值，则从父元素继承 */
+	/* 2024年12月5日 值改为black */
 	overflow: hidden;
 	/* 给一个元素中设置overflow:hidden，那么该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位 */
 	font-size: 17px;
