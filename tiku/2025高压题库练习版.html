@@ -105,6 +105,37 @@
 		    background: #ff4444 !important;
 		    color: white;
 		}
+		
+		/* 新增按钮样式 */
+		#toggleNavBtn {
+		    padding: 10px 20px;
+		    background: var(--primary);
+		    color: white;
+		    border: none;
+		    border-radius: 4px;
+		    cursor: pointer;
+		    margin: 10px 0;
+		    transition: 0.3s;
+		}
+		/* 修改导航栏过渡动画 */
+		#nav {
+		    display: grid;
+		    grid-template-columns: repeat(auto-fill, 40px);
+		    gap: 5px;
+		    max-height: 90vh; /* 改为视口高度百分比 */
+		    overflow-y: auto;  /* 添加滚动条 */
+		    transition: all 0.3s ease;
+		    margin: 15px 0;
+		}
+		
+		#nav.hidden {
+		    opacity: 0;
+		    max-height: 0;
+		    margin: 0;
+		    padding: 0;
+		    overflow: hidden; /* 隐藏时保持溢出隐藏 */
+		}
+		
     </style>
 </head>
 <body>
@@ -115,6 +146,7 @@
             <div>来源：链工宝APP高压题库</div>
             <div>更新时间：2025年4月19日</div>
         </div>
+		<button id="toggleNavBtn" onclick="toggleNavigation()">隐藏导航</button>
         <div id="timer">用时：<span>00:00:00</span></div>
         <div id="progress"><div id="progress-bar"></div></div>
         <div id="nav"></div>
@@ -14367,11 +14399,32 @@ function startTimer() {
 // 初始化
 window.onload = () => {
     initStorage();
+	document.getElementById('nav').classList.add('hidden'); // 新增这行
+	document.getElementById('toggleNavBtn').textContent = '显示导航'; // 更新按钮文字
     renderNav();
     renderQuestion();
     startTimer();
     updateProgress();
 };
+
+// 新增导航切换功能
+let isNavVisible = false;
+
+// 修改toggle函数保证完全展开
+function toggleNavigation() {
+    const nav = document.getElementById('nav');
+    const button = document.getElementById('toggleNavBtn');
+    
+    isNavVisible = !isNavVisible;
+    if(isNavVisible) {
+        nav.style.maxHeight = "50vh"; // 动态设置最大高度
+        nav.classList.remove('hidden');
+    } else {
+        nav.style.maxHeight = "0";
+        nav.classList.add('hidden');
+    }
+    button.textContent = isNavVisible ? '隐藏导航' : '显示导航';
+}
 </script>
 </body>
 </html>
