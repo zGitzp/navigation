@@ -1,3 +1,6 @@
+//功能不全，已过时，已废弃
+
+
 /* importClass(android.content.Context);
 importClass(android.provider.Settings);
 try {
