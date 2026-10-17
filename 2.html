@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script>
+!(function(j,a,g){j.__itrace_conf = {bid: 'f43basl8-6nqu7l3w',rel: '0.0.1', spa: true, uid: '', plugins:['jserror','interface','perf','resource','flow','blank']};var b = a.createElement("script");var d = a.getElementsByTagName("script")[0];b.type = "text/javascript";b.crossorigin = true;b.async = true;b.onload = function(){j.__itrace && j.__itrace.setReady()};d.parentNode.insertBefore(b,d);b.src = g})(window, document, "https://g.alicdn.com/woodpeckerx/itrace-next/itrace.iife.js")
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>助航灯光机务员考试</title>
+<style>
+/* SECTION: reset */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;
+  background:#F0F2F5;
+  color:#1F2937;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+button{cursor:pointer;border:none;outline:none;font-family:inherit}
+
+/* SECTION: container */
+.app{
+  max-width:430px;
+  margin:0 auto;
+  min-height:100vh;
+  background:#F0F2F5;
+  position:relative;
+}
+
+/* SECTION: screen-toggle */
+.screen{display:none;min-height:100vh}
+.screen.active{display:flex;flex-direction:column}
+
+/* ========== SCREEN 1: HOME ========== */
+/* SECTION: screen1-header */
+.s1-header{
+  background:linear-gradient(135deg,#60A5FA 0%,#3B82F6 50%,#2563EB 100%);
+  padding:48px 20px 50px;
+  position:relative;
+  overflow:hidden;
+}
+.s1-header::after{
+  content:'';
+  position:absolute;
+  bottom:-2px;left:0;right:0;
+  height:24px;
+  background:#F0F2F5;
+  border-radius:24px 24px 0 0;
+}
+.s1-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.s1-back{
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,0.2);border-radius:50%;
+}
+.s1-back svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.s1-capsule{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.25);
+  border-radius:20px;padding:6px 14px;
+  font-size:13px;color:#fff;
+}
+.s1-capsule-dot{width:4px;height:4px;background:#fff;border-radius:50%}
+.s1-title-area{display:flex;align-items:flex-end;justify-content:space-between}
+.s1-title-block{}
+.s1-title{font-size:32px;font-weight:700;color:#fff;letter-spacing:1px}
+.s1-subtitle{font-size:13px;color:rgba(255,255,255,0.75);margin-top:4px;letter-spacing:0.5px}
+/* illustration */
+.s1-illustration{position:relative;width:90px;height:90px;flex-shrink:0;margin-right:4px}
+.s1-illust-main{
+  width:64px;height:72px;
+  background:rgba(255,255,255,0.2);
+  border-radius:10px;
+  position:absolute;bottom:0;left:0;
+  display:flex;align-items:center;justify-content:center;
+  backdrop-filter:blur(2px);
+}
+.s1-illust-main svg{width:36px;height:36px;fill:none;stroke:#fff;stroke-width:1.5}
+.s1-illust-badge{
+  position:absolute;
+  width:32px;height:32px;
+  background:rgba(255,255,255,0.9);
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.s1-illust-badge svg{width:18px;height:18px;fill:none;stroke:#3B82F6;stroke-width:1.5}
+.s1-badge-1{top:0;right:10px}
+.s1-badge-2{top:28px;right:0}
+
+/* SECTION: screen1-content */
+.s1-content{
+  padding:0 20px 32px;
+  flex:1;
+}
+/* tabs */
+.s1-tabs{display:flex;gap:28px;margin-bottom:18px;padding-top:4px}
+.s1-tab{
+  font-size:15px;color:#6B7280;
+  padding-bottom:8px;position:relative;
+  background:none;
+}
+.s1-tab.active{color:#1F2937;font-weight:600}
+.s1-tab.active::after{
+  content:'';position:absolute;
+  bottom:0;left:10%;right:10%;
+  height:3px;background:#3B82F6;border-radius:2px;
+}
+/* filter tag */
+.s1-filter{
+  display:inline-flex;align-items:center;
+  border:1px solid #3B82F6;
+  color:#3B82F6;
+  font-size:13px;
+  padding:5px 16px;
+  border-radius:20px;
+  margin-bottom:20px;
+  background:transparent;
+}
+/* cards */
+.s1-cards{display:flex;flex-direction:column;gap:16px}
+.s1-card{
+  border-radius:16px;
+  padding:28px 20px;
+  display:flex;flex-direction:column;align-items:center;
+  gap:8px;
+  position:relative;
+  overflow:hidden;
+}
+.s1-card::before{
+  content:'';position:absolute;
+  top:-30px;right:-30px;
+  width:100px;height:100px;
+  border-radius:50%;
+  opacity:0.1;
+}
+.s1-card-blue{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%)}
+.s1-card-blue::before{background:#3B82F6}
+.s1-card-purple{background:linear-gradient(135deg,#F5F3FF 0%,#EDE9FE 100%)}
+.s1-card-purple::before{background:#7C3AED}
+.s1-card-orange{background:linear-gradient(135deg,#FFFBEB 0%,#FEF3C7 100%)}
+.s1-card-orange::before{background:#F59E0B}
+.s1-card-title{font-size:19px;font-weight:700;text-align:center}
+.s1-card-blue .s1-card-title{color:#1E40AF}
+.s1-card-purple .s1-card-title{color:#5B21B6}
+.s1-card-orange .s1-card-title{color:#78350F}
+.s1-card-sub{font-size:15px;margin-top:-4px}
+.s1-card-blue .s1-card-sub{color:#2563EB}
+.s1-card-purple .s1-card-sub{color:#7C3AED}
+.s1-card-orange .s1-card-sub{color:#B45309}
+.s1-card-btn{
+  margin-top:10px;
+  background:#fff;
+  border-radius:20px;
+  padding:8px 32px;
+  font-size:14px;font-weight:600;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  transition:transform 0.15s;
+}
+.s1-card-btn:active{transform:scale(0.96)}
+.s1-card-blue .s1-card-btn{color:#2563EB}
+.s1-card-purple .s1-card-btn{color:#7C3AED}
+.s1-card-orange .s1-card-btn{color:#B45309}
+
+/* ========== SCREEN 2: EXAM INFO ========== */
+/* SECTION: screen2-header */
+.s2-header{
+  background:linear-gradient(135deg,#60A5FA 0%,#3B82F6 50%,#2563EB 100%);
+  padding:48px 20px 44px;
+  position:relative;
+}
+.s2-header::after{
+  content:'';position:absolute;
+  bottom:-2px;left:0;right:0;
+  height:24px;
+  background:#F0F2F5;
+  border-radius:24px 24px 0 0;
+}
+.s2-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.s2-back{
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,0.2);border-radius:50%;
+}
+.s2-back svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.s2-nav-title{font-size:17px;font-weight:600;color:#fff}
+.s2-capsule{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.25);
+  border-radius:20px;padding:6px 14px;
+  font-size:13px;color:#fff;
+}
+.s2-capsule-dot{width:4px;height:4px;background:#fff;border-radius:50%}
+.s2-exam-title{font-size:22px;font-weight:700;color:#fff;margin-bottom:6px}
+.s2-exam-tag{font-size:14px;color:rgba(255,255,255,0.85)}
+
+/* SECTION: screen2-content */
+.s2-content{
+  padding:0 20px 40px;
+  flex:1;
+  display:flex;flex-direction:column;
+}
+.s2-info-card{
+  background:#fff;
+  border-radius:20px;
+  padding:28px 24px;
+  flex:1;
+  display:flex;flex-direction:column;
+  box-shadow:0 2px 12px rgba(0,0,0,0.05);
+}
+.s2-section-title{
+  display:flex;align-items:center;gap:10px;
+  font-size:18px;font-weight:700;color:#111827;
+  margin-bottom:28px;
+}
+.s2-section-bar{
+  width:4px;height:20px;
+  background:#3B82F6;border-radius:2px;
+  flex-shrink:0;
+}
+.s2-info-list{display:flex;flex-direction:column;gap:22px;flex:1}
+.s2-info-item{}
+.s2-info-label{font-size:15px;font-weight:600;color:#374151;margin-bottom:6px}
+.s2-info-value{font-size:15px;color:#4B5563}
+.s2-start-btn{
+  margin-top:36px;
+  background:linear-gradient(135deg,#3B82F6,#2563EB);
+  color:#fff;
+  font-size:17px;font-weight:600;
+  border-radius:25px;
+  padding:14px 0;
+  width:100%;
+  box-shadow:0 4px 14px rgba(37,99,235,0.35);
+  transition:transform 0.15s;
+}
+.s2-start-btn:active{transform:scale(0.97)}
+
+/* ========== SCREEN 3: QUIZ ========== */
+/* SECTION: screen3-header */
+.s3-header{
+  background:linear-gradient(135deg,#60A5FA 0%,#3B82F6 50%,#2563EB 100%);
+  padding:48px 20px 40px;
+  position:relative;
+}
+.s3-header::after{
+  content:'';position:absolute;
+  bottom:-2px;left:0;right:0;
+  height:20px;
+  background:#F0F2F5;
+  border-radius:20px 20px 0 0;
+}
+.s3-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.s3-back{
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,0.2);border-radius:50%;
+}
+.s3-back svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.s3-nav-title{font-size:17px;font-weight:600;color:#fff}
+.s3-capsule{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.25);
+  border-radius:20px;padding:6px 14px;
+  font-size:13px;color:#fff;
+}
+.s3-capsule-dot{width:4px;height:4px;background:#fff;border-radius:50%}
+.s3-exam-title{font-size:21px;font-weight:700;color:#fff;margin-bottom:5px}
+.s3-exam-tag{font-size:14px;color:rgba(255,255,255,0.85)}
+
+/* SECTION: screen3-content */
+.s3-content{
+  padding:0 16px 32px;
+  flex:1;
+  display:flex;flex-direction:column;
+}
+.s3-question-card{
+  background:#fff;
+  border-radius:16px;
+  padding:24px 20px;
+  flex:1;
+  box-shadow:0 2px 12px rgba(0,0,0,0.05);
+  display:flex;flex-direction:column;
+}
+.s3-q-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:20px;
+}
+.s3-q-type{font-size:15px;font-weight:600;color:#374151}
+.s3-timer{
+  display:flex;align-items:center;gap:6px;
+  background:#FFF7ED;
+  border-radius:16px;
+  padding:5px 12px;
+}
+.s3-timer svg{width:16px;height:16px;fill:none;stroke:#EA580C;stroke-width:2}
+.s3-timer-text{font-size:13px;color:#EA580C;font-variant-numeric:tabular-nums;font-weight:500}
+.s3-q-text{
+  font-size:17px;line-height:1.65;color:#1F2937;
+  margin-bottom:24px;
+  font-weight:500;
+}
+.s3-options{display:flex;flex-direction:column;gap:12px;flex:1}
+.s3-option{
+  background:#F5F5F5;
+  border-radius:12px;
+  padding:16px 18px;
+  font-size:16px;color:#374151;
+  line-height:1.5;
+  text-align:left;
+  transition:all 0.15s;
+  border:2px solid transparent;
+}
+.s3-option:active{transform:scale(0.98)}
+.s3-option.selected{
+  background:#EFF6FF;
+  border-color:#3B82F6;
+  color:#1E40AF;
+  font-weight:500;
+}
+/* SECTION: screen3-footer */
+.s3-footer{
+  display:flex;gap:14px;
+  padding:20px 0 8px;
+}
+.s3-btn{
+  flex:1;
+  border-radius:25px;
+  padding:13px 0;
+  font-size:16px;font-weight:600;
+  transition:transform 0.15s;
+}
+.s3-btn:active{transform:scale(0.97)}
+.s3-btn-prev{
+  background:#fff;
+  color:#3B82F6;
+  border:1.5px solid #3B82F6;
+}
+.s3-btn-next{
+  background:linear-gradient(135deg,#3B82F6,#2563EB);
+  color:#fff;
+  box-shadow:0 3px 10px rgba(37,99,235,0.3);
+}
+.s3-btn-hidden{visibility:hidden}
+
+/* ========== RESPONSIVE ========== */
+@media(min-width:768px){
+  .app{
+    max-width:430px;
+    box-shadow:0 0 40px rgba(0,0,0,0.1);
+  }
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- SECTION: screen1 -->
+  <div class="screen active" id="screen1">
+    <div class="s1-header">
+      <div class="s1-nav">
+        <button class="s1-back" aria-label="返回">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="s1-capsule">
+          <span class="s1-capsule-dot"></span>
+          <span class="s1-capsule-dot"></span>
+          <span class="s1-capsule-dot"></span>
+          <span style="margin-left:4px">⊡</span>
+        </div>
+      </div>
+      <div class="s1-title-area">
+        <div class="s1-title-block">
+          <div class="s1-title">在线考试</div>
+          <div class="s1-subtitle">ONLINE EXAMINATION</div>
+        </div>
+        <div class="s1-illustration">
+          <div class="s1-illust-main">
+            <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="12" y2="15"/></svg>
+          </div>
+          <div class="s1-illust-badge s1-badge-1">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-7 8-7s8 3 8 7"/></svg>
+          </div>
+          <div class="s1-illust-badge s1-badge-2">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2c3 3.5 3 16.5 0 20"/><path d="M12 2c-3 3.5-3 16.5 0 20"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="s1-content">
+      <div class="s1-tabs">
+        <button class="s1-tab" data-tab="fly">飞行区从业人员</button>
+        <button class="s1-tab active" data-tab="light">助航灯光机务员</button>
+      </div>
+      <button class="s1-filter">助航灯光</button>
+      <div class="s1-cards">
+        <div class="s1-card s1-card-blue">
+          <div class="s1-card-title">助航灯光机务员考试</div>
+          <div class="s1-card-sub">(初训)</div>
+          <button class="s1-card-btn" data-primary-action>我要考试</button>
+        </div>
+        <div class="s1-card s1-card-purple">
+          <div class="s1-card-title">助航灯光机务员考试</div>
+          <div class="s1-card-sub">(复训)</div>
+          <button class="s1-card-btn" data-primary-action>我要考试</button>
+        </div>
+        <div class="s1-card s1-card-orange" id="cardDaily">
+          <div class="s1-card-title">助航灯光机务员考试</div>
+          <div class="s1-card-sub">(日常)</div>
+          <button class="s1-card-btn" data-primary-action id="btnDailyExam">我要考试</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION: screen2 -->
+  <div class="screen" id="screen2">
+    <div class="s2-header">
+      <div class="s2-nav">
+        <button class="s2-back" id="btnBackToS1" aria-label="返回">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="s2-nav-title">在线考试</div>
+        <div class="s2-capsule">
+          <span class="s2-capsule-dot"></span>
+          <span class="s2-capsule-dot"></span>
+          <span class="s2-capsule-dot"></span>
+          <span style="margin-left:4px">⊡</span>
+        </div>
+      </div>
+      <div class="s2-exam-title">助航灯光机务员考试</div>
+      <div class="s2-exam-tag">日常</div>
+    </div>
+    <div class="s2-content">
+      <div class="s2-info-card">
+        <div class="s2-section-title">
+          <span class="s2-section-bar"></span>
+          <span>考试提示</span>
+        </div>
+        <div class="s2-info-list">
+          <div class="s2-info-item">
+            <div class="s2-info-label">考试题数：</div>
+            <div class="s2-info-value">100道</div>
+          </div>
+          <div class="s2-info-item">
+            <div class="s2-info-label">考试合格标准：</div>
+            <div class="s2-info-value">90分（含90分）</div>
+          </div>
+          <div class="s2-info-item">
+            <div class="s2-info-label">考试时长：</div>
+            <div class="s2-info-value">100分钟</div>
+          </div>
+        </div>
+        <button class="s2-start-btn" data-primary-action id="btnStartExam">开始考试</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION: screen3 -->
+  <div class="screen" id="screen3">
+    <div class="s3-header">
+      <div class="s3-nav">
+        <button class="s3-back" id="btnBackToS2" aria-label="返回">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="s3-nav-title">在线考试</div>
+        <div class="s3-capsule">
+          <span class="s3-capsule-dot"></span>
+          <span class="s3-capsule-dot"></span>
+          <span class="s3-capsule-dot"></span>
+          <span style="margin-left:4px">⊡</span>
+        </div>
+      </div>
+      <div class="s3-exam-title">助航灯光机务员考试</div>
+      <div class="s3-exam-tag">日常</div>
+    </div>
+    <div class="s3-content">
+      <div class="s3-question-card">
+        <div class="s3-q-header">
+          <span class="s3-q-type">单选题</span>
+          <div class="s3-timer">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span class="s3-timer-text" id="timerDisplay">01:39:58</span>
+          </div>
+        </div>
+        <div class="s3-q-text" id="questionText"></div>
+        <div class="s3-options" id="optionsContainer"></div>
+        <div class="s3-footer">
+          <button class="s3-btn s3-btn-prev" id="btnPrev">上一题</button>
+          <button class="s3-btn s3-btn-next" id="btnNext">下一题</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* SECTION: exam-data */
+var questions = [
+  {
+    q: "1.应按照哪方面的规定对精密进近坡度指示系统等关键设备开展飞行校验（）。",
+    opts: ["A.机场", "B.中国民航局", "C.国际民航组织指南", "D.设备厂家"]
+  },
+  {
+    q: "2.备用发电机组带载试验的每月最低时长是？（）",
+    opts: ["A.15min", "B.30min", "C.60min", "D.120min"]
+  },
+  {
+    q: "3.跑道末端灯至少应由（）个灯组成。",
+    opts: ["A.6", "B.8", "C.10", "D.12"]
+  },
+  {
+    q: "4.跑道中线灯的颜色排列应遵循什么原则？（）",
+    opts: ["A.全白", "B.全红", "C.白红交替", "D.白绿交替"]
+  },
+  {
+    q: "5.助航灯光系统日常巡检的频率通常为（）。",
+    opts: ["A.每日一次", "B.每周一次", "C.每月一次", "D.每季度一次"]
+  },
+  {
+    q: "6.精密进近灯光系统（CAT I）的全长应不小于（）。",
+    opts: ["A.300m", "B.600m", "C.900m", "D.1200m"]
+  },
+  {
+    q: "7.跑道边灯的发光颜色应为（）。",
+    opts: ["A.白色", "B.绿色", "C.红色", "D.黄色"]
+  },
+  {
+    q: "8.滑行道边灯的颜色应为（）。",
+    opts: ["A.白色", "B.蓝色", "C.绿色", "D.红色"]
+  },
+  {
+    q: "9.PAPI（精密进近航道指示器）正常工作时，飞行员在正确下滑道上看到的灯色组合为（）。",
+    opts: ["A.4白", "B.4红", "C.2白2红", "D.3白1红"]
+  },
+  {
+    q: "10.跑道入口灯的颜色应为（）。",
+    opts: ["A.白色", "B.绿色", "C.红色", "D.黄色"]
+  },
+  {
+    q: "11.助航灯光恒流调光器的主要作用是（）。",
+    opts: ["A.调节电压", "B.保持亮度恒定", "C.控制开关", "D.防雷保护"]
+  },
+  {
+    q: "12.跑道中线灯在最后300米区段的颜色应为（）。",
+    opts: ["A.全白", "B.全红", "C.红白交替", "D.红绿交替"]
+  },
+  {
+    q: "13.助航灯光系统的接地电阻应不大于（）。",
+    opts: ["A.1Ω", "B.4Ω", "C.10Ω", "D.20Ω"]
+  },
+  {
+    q: "14.下列哪项不属于助航灯光系统日常维护的内容（）。",
+    opts: ["A.清洁灯具", "B.检查光源亮度", "C.更换跑道道面", "D.检查控制柜"]
+  },
+  {
+    q: "15.跑道边灯的间距一般不大于（）。",
+    opts: ["A.30m", "B.60m", "C.90m", "D.120m"]
+  },
+  {
+    q: "16.目视进近坡度指示系统（VASI）通常设置几组灯具（）。",
+    opts: ["A.1组", "B.2组", "C.3组", "D.4组"]
+  },
+  {
+    q: "17.助航灯光一次回路的绝缘电阻应不低于（）。",
+    opts: ["A.1MΩ", "B.5MΩ", "C.10MΩ", "D.20MΩ"]
+  },
+  {
+    q: "18.在跑道等待位置设置的停止排灯颜色为（）。",
+    opts: ["A.白色", "B.黄色", "C.红色", "D.蓝色"]
+  },
+  {
+    q: "19.助航灯光监控系统的主要功能不包括（）。",
+    opts: ["A.监视灯具状态", "B.调节灯光级数", "C.控制跑道道面温度", "D.故障报警"]
+  },
+  {
+    q: "20.简易进近灯光系统的全长应不小于（）。",
+    opts: ["A.210m", "B.300m", "C.420m", "D.600m"]
+  },
+  {
+    q: "21.应按照哪方面的规定对精密进近坡度指示系统等关键设备开展飞行校验（）。",
+    opts: ["A.机场", "B.中国民航局", "C.国际民航组织指南", "D.设备厂家"]
+  },
+  {
+    q: "22.备用发电机组带载试验的每月最低时长是？（）",
+    opts: ["A.15min", "B.30min", "C.60min", "D.120min"]
+  },
+  {
+    q: "23.跑道末端灯至少应由（）个灯组成。",
+    opts: ["A.6", "B.8", "C.10", "D.12"]
+  },
+  {
+    q: "24.跑道中线灯的颜色排列应遵循什么原则？（）",
+    opts: ["A.全白", "B.全红", "C.白红交替", "D.白绿交替"]
+  },
+  {
+    q: "25.参加外来物防范培训并考核合格应当作为在（ ）内的作业人员办理机场控制区通行证的基本条件之一。",
+    opts: ["A.飞行区", "B.航站楼", "C.机场", "D.航空器"]
+  },
+  {
+    q: "26.凡不易与承重道面区分的（ ）、跑道掉头坪、等待坪和停机坪的道肩以及其他非承重道面，应在非承重表面与承重表面的交界处设置滑行边线标志。",
+    opts: ["A.跑道", "B.滑行道", "C.道肩", "D.停机坪"]
+  },
+  {
+    q: "27.跑道边灯的发光颜色应为（）。",
+    opts: ["A.白色", "B.绿色", "C.红色", "D.黄色"]
+  },
+  {
+    q: "28.滑行道边灯的颜色应为（）。",
+    opts: ["A.白色", "B.蓝色", "C.绿色", "D.红色"]
+  },
+  {
+    q: "29.PAPI（精密进近航道指示器）正常工作时，飞行员在正确下滑道上看到的灯色组合为（）。",
+    opts: ["A.4白", "B.4红", "C.2白2红", "D.3白1红"]
+  },
+  {
+    q: "30.跑道入口灯的颜色应为（）。",
+    opts: ["A.白色", "B.绿色", "C.红色", "D.黄色"]
+  },{
+    q: "31.应按照哪方面的规定对精密进近坡度指示系统等关键设备开展飞行校验（）。",
+    opts: ["A.机场", "B.中国民航局", "C.国际民航组织指南", "D.设备厂家"]
+  },
+  {
+    q: "32.备用发电机组带载试验的每月最低时长是？（）",
+    opts: ["A.15min", "B.30min", "C.60min", "D.120min"]
+  },
+  {
+    q: "33.跑道末端灯至少应由（）个灯组成。",
+    opts: ["A.6", "B.8", "C.10", "D.12"]
+  },
+  {
+    q: "34.跑道中线灯的颜色排列应遵循什么原则？（）",
+    opts: ["A.全白", "B.全红", "C.白红交替", "D.白绿交替"]
+  },
+  {
+    q: "35.助航灯光系统日常巡检的频率通常为（）。",
+    opts: ["A.每日一次", "B.每周一次", "C.每月一次", "D.每季度一次"]
+  },
+  {
+    q: "36.精密进近灯光系统（CAT I）的全长应不小于（）。",
+    opts: ["A.300m", "B.600m", "C.900m", "D.1200m"]
+  },
+  {
+    q: "37.跑道边灯的发光颜色应为（）。",
+    opts: ["A.白色", "B.绿色", "C.红色", "D.黄色"]
+  },
+  {
+    q: "38.滑行道边灯的颜色应为（）。",
+    opts: ["A.白色", "B.蓝色", "C.绿色", "D.红色"]
+  },
+  {
+    q: "39.PAPI（精密进近航道指示器）正常工作时，飞行员在正确下滑道上看到的灯色组合为（）。",
+    opts: ["A.4白", "B.4红", "C.2白2红", "D.3白1红"]
+  },
+  {
+    q: "40.跑道入口灯的颜色应为（）。",
+    opts: ["A.白色", "B.绿色", "C.红色", "D.黄色"]
+  },{
+    q: "71.应按照哪方面的规定对精密进近坡度指示系统等关键设备开展飞行校验（）。",
+    opts: ["A.机场", "B.中国民航局", "C.国际民航组织指南", "D.设备厂家"]
+  },
+  {
+    q: "72.备用发电机组带载试验的每月最低时长是？（）",
+    opts: ["A.15min", "B.30min", "C.60min", "D.120min"]
+  },
+  {
+    q: "73.跑道末端灯至少应由（）个灯组成。",
+    opts: ["A.6", "B.8", "C.10", "D.12"]
+  },
+  {
+    q: "74.跑道中线灯的颜色排列应遵循什么原则？（）",
+    opts: ["A.全白", "B.全红", "C.白红交替", "D.白绿交替"]
+  },
+  {
+    q: "75.助航灯光系统日常巡检的频率通常为（）。",
+    opts: ["A.每日一次", "B.每周一次", "C.每月一次", "D.每季度一次"]
+  },
+  {
+    q: "76.精密进近灯光系统（CAT I）的全长应不小于（）。",
+    opts: ["A.300m", "B.600m", "C.900m", "D.1200m"]
+  },
+  {
+    q: "77.跑道边灯的发光颜色应为（）。",
+    opts: ["A.白色", "B.绿色", "C.红色", "D.黄色"]
+  },
+  {
+    q: "78.滑行道边灯的颜色应为（）。",
+    opts: ["A.白色", "B.蓝色", "C.绿色", "D.红色"]
+  },
+  {
+    q: "79.PAPI（精密进近航道指示器）正常工作时，飞行员在正确下滑道上看到的灯色组合为（）。",
+    opts: ["A.4白", "B.4红", "C.2白2红", "D.3白1红"]
+  },
+  {
+    q: "80.跑道入口灯的颜色应为（）。",
+    opts: ["A.白色", "B.绿色", "C.红色", "D.黄色"]
+  }
+];
+
+/* SECTION: state */
+var currentQ = 0;
+var selectedAnswers = {};
+var timerSeconds = 100 * 60;
+var timerInterval = null;
+
+/* SECTION: navigation */
+function showScreen(id) {
+  var screens = document.querySelectorAll('.screen');
+  for (var i = 0; i < screens.length; i++) {
+    screens[i].classList.remove('active');
+  }
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+/* SECTION: screen1-logic */
+document.getElementById('btnDailyExam').addEventListener('click', function() {
+  showScreen('screen2');
+});
+
+document.querySelectorAll('.s1-tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.s1-tab').forEach(function(t) { t.classList.remove('active'); });
+    tab.classList.add('active');
+  });
+});
+
+document.getElementById('btnBackToS1').addEventListener('click', function() {
+  showScreen('screen1');
+});
+
+/* SECTION: screen2-logic */
+document.getElementById('btnStartExam').addEventListener('click', function() {
+  showScreen('screen3');
+  currentQ = 0;
+  selectedAnswers = {};
+  timerSeconds = 100 * 60;
+  renderQuestion();
+  startTimer();
+});
+
+document.getElementById('btnBackToS2').addEventListener('click', function() {
+  if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+  showScreen('screen2');
+});
+
+/* SECTION: quiz-logic */
+function renderQuestion() {
+  var data = questions[currentQ];
+  var qText = document.getElementById('questionText');
+  qText.textContent = data.q;
+
+  var container = document.getElementById('optionsContainer');
+  container.innerHTML = '';
+  for (var i = 0; i < data.opts.length; i++) {
+    var btn = document.createElement('button');
+    btn.className = 's3-option';
+    btn.textContent = data.opts[i];
+    btn.setAttribute('data-index', i);
+    if (selectedAnswers[currentQ] === i) {
+      btn.classList.add('selected');
+    }
+    btn.addEventListener('click', (function(idx, el) {
+      return function() {
+        selectedAnswers[currentQ] = idx;
+        var all = container.querySelectorAll('.s3-option');
+        for (var j = 0; j < all.length; j++) { all[j].classList.remove('selected'); }
+        el.classList.add('selected');
+      };
+    })(i, btn));
+    container.appendChild(btn);
+  }
+
+  var prevBtn = document.getElementById('btnPrev');
+  var nextBtn = document.getElementById('btnNext');
+  if (currentQ === 0) {
+    prevBtn.classList.add('s3-btn-hidden');
+  } else {
+    prevBtn.classList.remove('s3-btn-hidden');
+  }
+  if (currentQ === questions.length - 1) {
+    nextBtn.textContent = '交卷';
+  } else {
+    nextBtn.textContent = '下一题';
+  }
+}
+
+document.getElementById('btnPrev').addEventListener('click', function() {
+  if (currentQ > 0) { currentQ--; renderQuestion(); }
+});
+document.getElementById('btnNext').addEventListener('click', function() {
+  if (currentQ < questions.length - 1) {
+    currentQ++;
+    renderQuestion();
+  } else {
+    if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+    var answered = Object.keys(selectedAnswers).length;
+    alert('交卷成功！\n已答题：' + answered + '/' + questions.length + ' 道');
+    showScreen('screen1');
+  }
+});
+
+/* SECTION: timer */
+function startTimer() {
+  if (timerInterval) { clearInterval(timerInterval); }
+  updateTimerDisplay();
+  timerInterval = setInterval(function() {
+    timerSeconds--;
+    if (timerSeconds <= 0) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      alert('考试时间到！');
+      showScreen('screen1');
+      return;
+    }
+    updateTimerDisplay();
+  }, 1000);
+}
+function updateTimerDisplay() {
+  var h = Math.floor(timerSeconds / 3600);
+  var m = Math.floor((timerSeconds % 3600) / 60);
+  var s = timerSeconds % 60;
+  var str = (h < 10 ? '0' : '') + h + ':' + (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  document.getElementById('timerDisplay').textContent = str;
+}
+</script>
+</body>
+</html>
